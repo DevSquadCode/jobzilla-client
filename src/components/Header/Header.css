@@ -1,0 +1,27 @@
+.nav-link{
+    color: red;
+}
+
+#menu{
+    /* color: #CDCDCD; */
+    color: #232763;
+    margin-right: 10px;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    font-weight: 700;
+
+}
+
+#menu:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 219, 34);
+}
+
+#logMenu{
+    margin-right: 10px;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(25, 206, 25);
+}
