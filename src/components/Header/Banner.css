@@ -6,36 +6,29 @@
     position: relative;
 }
 
+.banner{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .color{
     color: rgb(25, 206, 25);
 }
 
 .seeker-employe{
     border-radius: 50%;
-    /* border: none; */
-
 }
-
-/* .job-image{
-    margin-left: 100px;
-    margin-top: 63px;
-    width: 500px;
-    height: 500px;
-
-} */
 
 .seeker{
     margin-right: 5px;
-    
 }
 
-.employe{
+.employee{
     margin-left: 5px;
 }
-
-/* .job-button{
-    display: flex;
-} */
 
 .seeker-card{
     display: flex;
@@ -63,21 +56,9 @@
     color: white;
 }
 
-
-/* .dream-job{
-    margin-top: 150px;
-} */
-
 #solid{
     border: 2px solid rgb(25, 206, 25);
 }
 
 
 
-.banner{
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}

@@ -22,22 +22,10 @@ const Banner = () => {
                 <div className='seeker'>
                         <button type="button" class="seeker-button"><img class="seeker-employe" src={seeker} alt="job seeker image" width="100" height="100"/>JobSeeker</button>
                     </div>
-                    <div className='employe'>
+                    <div className='employee'>
                         <button type="button" class="seeker-button"><img class="seeker-employe" src={seeker} alt="job seeker image" width="100" height="100"/>Employe</button>
                     </div>
-
-
-
-
-                    {/* <div class='col-md-3 seeker'>
-                        <button type="button" class="seeker-button"><img class="seeker-employe" src={seeker} alt="job seeker image" width="100" height="100"/>JobSeeker</button>
-                    </div>
-                    <div class='col-md-3 employe'>
-                        <button type="button" class="seeker-button"><img class="seeker-employe" src={seeker} alt="job seeker image" width="100" height="100"/>Employe</button>
-                    </div> */}
                 </div>
-
-                
             </div>
         </div>
     );
