@@ -6,6 +6,10 @@
     height: 550px;
 }
 
+.color{
+    color: rgb(25, 206, 25);
+}
+
 .seeker-employe{
     border-radius: 50%;
 }

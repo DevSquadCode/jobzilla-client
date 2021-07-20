@@ -9,7 +9,7 @@ const Banner = () => {
             <div class='row'>
                 <div class='col-md-6'>
                     <div class='dream-job'>
-                        <h1>Get Your Dream Job!</h1>
+                        <h1 class="color">Get Your Dream Job!</h1>
                     </div>
 
                     <div class="input-group mb-3">
