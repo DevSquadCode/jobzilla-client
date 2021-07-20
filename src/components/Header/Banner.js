@@ -1,5 +1,6 @@
 import React from 'react';
 import banner from '../../images/banner.png'
+import seeker from '../../images/seeker.jpg'
 import './Banner.css';
 
 const Banner = () => {
@@ -20,10 +21,10 @@ const Banner = () => {
 
                 <div class='col-md-6 job-button'>
                     <div class='col-md-3 seeker'>
-                        <button type="button" class="seeker-button"><image src=""></image>I am Job Seeker</button>
+                        <button type="button" class="seeker-button"><img class="seeker-employe" src={seeker} alt="job seeker image" width="100" height="100"/>JobSeeker</button>
                     </div>
                     <div class='col-md-3 employe'>
-                        <button type="button" class="seeker-button">I am Employe</button>
+                        <button type="button" class="seeker-button"><img class="seeker-employe" src={seeker} alt="job seeker image" width="100" height="100"/>Employe</button>
                     </div>
                 </div>
 
