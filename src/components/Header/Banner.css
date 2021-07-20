@@ -1,9 +1,9 @@
-
 .background{
     background-image: url('../../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 550px;
+    min-height: 100vh;
+    position: relative;
 }
 
 .color{
@@ -12,6 +12,8 @@
 
 .seeker-employe{
     border-radius: 50%;
+    /* border: none; */
+
 }
 
 /* .job-image{
@@ -23,24 +25,28 @@
 } */
 
 .seeker{
-    margin-top: 200px;
-    margin-left: 200px;
+    margin-right: 5px;
     
 }
 
 .employe{
-    margin-top: 200px;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
-.job-button{
+/* .job-button{
     display: flex;
-    
+} */
+
+.seeker-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .seeker-button{
     background-color: rgb(25, 206, 25);
-    border-radius: 5px;
+    border-radius: 24px;
+    border: none;
     width: 150px;
     height: 150px;
     opacity: 0.8;
@@ -48,8 +54,7 @@
 }
 
 .input-group{
-    margin-top: 50px;
-    margin-right: 300px;
+    margin-top: 30px;
 }
 
 .btn-color{
@@ -59,10 +64,20 @@
 }
 
 
-.dream-job{
+/* .dream-job{
     margin-top: 150px;
-}
+} */
 
 #solid{
     border: 2px solid rgb(25, 206, 25);
+}
+
+
+
+.banner{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
