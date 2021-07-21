@@ -1,13 +1,10 @@
-import './App.css';
-import Banner from './components/Header/Banner';
-import Header from './components/Header/Header';
+import Home from './pages/Home/Home.jsx';
 
 function App() {
   return (
-    <div className="App">
-    <Header></Header>
-    <Banner></Banner>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
