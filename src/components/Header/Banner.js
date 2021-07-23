@@ -1,24 +1,30 @@
 import React from 'react';
-import banner from '../../images/banner.jpg'
-import './Banner.css';
+import banner from '../../images/banner.jpg';
+import bannerStyle from './Banner.module.css';
+
+
 
 const Banner = () => {
+    const {
+        dreamJob, 
+        btnColor, 
+    } = bannerStyle;
+
+
     return (
-        <div class='container'>
-            <div class='row'>
-                <div class='col-md-6'>
-                    <div class='dream-job'>
+        <div className='container'>
+            <div className='row'>
+                <div className='col-md-6'>
+                    <div className={dreamJob}>
                         <h1>Get Your Dream Job!</h1>
                     </div>
 
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search Your Job Here" aria-label="Recipient's username" aria-describedby="button-addon2"></input>
-                        <button type="button" class="btn-color">Primary</button>
+                    <div className='input-group mb-3'>
+                        <input type="text" className="form-control rounded p-2" placeholder="Search Your Job Here" aria-label="Recipient's username" aria-describedby="button-addon2"></input>
+                        <button type="button" className={`${btnColor} btn btn-outline-info rounded`}>Primary</button>
                     </div>
-                    
                 </div>
-
-                <div class='col-md-6'>
+                <div className='col-md-6'>
                     <img src={banner} alt="Job Banner" width="500" height="500"></img>
                 </div>
             </div>
