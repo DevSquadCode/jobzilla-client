@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Celina Perry",
+        "post": "Web Developer",
+        "company": "Arthmate",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/women/71.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 2,
+        "name": "Gerald Patterson",
+        "post": "HR",
+        "company": "SoftSolution Ltd",
+        "type": "Recruiter",
+        "image": "https://randomuser.me/api/portraits/men/31.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 3,
+        "name": "Mario Williamson",
+        "post": "Softwere Engineer",
+        "company": "Sun Microsystem",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/men/52.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 4,
+        "name": "Landon Flores",
+        "post": "QA Engineer",
+        "company": "Inkoop",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/men/57.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 5,
+        "name": "Derrick Oliver",
+        "post": "HR",
+        "company": "EQOURSE",
+        "type": "Recruiter",
+        "image": "https://randomuser.me/api/portraits/men/78.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 6,
+        "name": " Felecia Butler",
+        "post": "Project Manager",
+        "company": "EQOURSE",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/women/76.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 7,
+        "name": "Martin Henry",
+        "post": "Business Analyst",
+        "company": "EasyDays Marketing LLP",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/men/76.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 8,
+        "name": "Jesse Sutton",
+        "post": "Web Developer",
+        "company": "Zenrion Technologies",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/men/62.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 9,
+        "name": "Hannah Bradley",
+        "post": "Softwere Engineer",
+        "company": "DesignBoxed Creatives",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/women/39.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    },
+    {
+        "id": 10,
+        "name": "Jack Cruz",
+        "post": "Web Developer",
+        "company": "IntelliSQR",
+        "type": "Employee",
+        "image": "https://randomuser.me/api/portraits/men/37.jpg",
+        "feedback": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nulla natus numquam, obcaecati blanditiis quibusdam! Officiis ullam laboriosam veritatis mollitia cupiditate, numquam debitis aliquid excepturi dicta perspiciatis molestias commodi sint atque iste nemo eum, esse aliquam fugit recusandae. Quas, iste!"
+    }
+]

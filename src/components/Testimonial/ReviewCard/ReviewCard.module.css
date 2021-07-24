@@ -1,0 +1,9 @@
+.reviewCard{
+    background-color: #6ee9f5;
+    width: 75%;
+    border-radius: 12px;
+}
+
+.reviewText{
+    padding: 12px;
+}
