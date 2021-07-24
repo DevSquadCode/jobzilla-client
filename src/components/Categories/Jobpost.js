@@ -4,51 +4,58 @@ import companyImage from '../../images/companyImage.jpg'
 
 const Jobpost = () => {
     return (
-        <div className='container card'>
+        <div className='container mt-5'>
+          <h1 className="text-center">Job Listing</h1>
+          <br />
             <div className='row'>
 
-            <h1 className="text-center">Recent Job Post</h1>
-
             <div className="col-md-12">
-             <div class="card box-shadow">
-              <div class="card-body">
-                {/* <h5 class="card-title">Special title treatment</h5> */}
+             <div class="cardList">
+              <div class="cardList-body">
                 <div className="icon">
-                    {/* <i className="fa fa-code"></i> */}
-                    <img src='#' alt="Girl in a jacket"></img>
+                <i class="fab fa-free-code-camp fa-3x"></i>
                 </div>
                 <h4>Company Name</h4>
                 <p>Junior web Dev.</p>
+              </div>
+              <div className="card-apply text-center">
+                <h5>Apply Now</h5>
+                <p>Date line: 31 Jan 2021</p>
               </div>
             </div>
           </div>
 
           <div className="col-md-12">
-             <div class="card box-shadow">
-              <div class="card-body">
-                {/* <h5 class="card-title">Special title treatment</h5> */}
+             <div class="cardList">
+              <div class="cardList-body">
                 <div className="icon">
-                    <img src='#' alt="Girl in a jacket"></img>
+                <i class="fab fa-free-code-camp fa-3x"></i>
                 </div>
                 <h4>Company Name</h4>
                 <p>Junior web Dev.</p>
+              </div>
+              <div className="card-apply text-center">
+                <h5>Apply Now</h5>
+                <p>Date line: 31 Jan 2021</p>
               </div>
             </div>
           </div>
 
           <div className="col-md-12">
-             <div class="card box-shadow">
-              <div class="card-body">
-                {/* <h5 class="card-title">Special title treatment</h5> */}
+             <div class="cardList">
+              <div class="cardList-body">
                 <div className="icon">
-                    <img src='#' alt="Girl in a jacket"></img>
+                <i class="fab fa-free-code-camp fa-3x"></i>
                 </div>
                 <h4>Company Name</h4>
                 <p>Junior web Dev.</p>
               </div>
+              <div className="card-apply text-center">
+                <h5>Apply Now</h5>
+                <p>Date line: 31 Jan 2021</p>
+              </div>
             </div>
           </div>
-            <small className='text-center'>Find More Jobs</small>
           </div>
         </div>
     );
