@@ -1,0 +1,18 @@
+.categories{
+    display: flex;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.box-shadow{
+    box-shadow: 2px 2px 2px 2px rgb(25, 206, 25);
+}
+
+.icon{
+    color: white;
+    text-align: center;
+    background-color: rgb(25, 206, 25);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
