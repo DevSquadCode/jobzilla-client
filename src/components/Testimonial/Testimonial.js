@@ -51,10 +51,27 @@ export default class AutoPlay extends Component {
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
-            speed: 6500,
-            autoplaySpeed: 6500,
+            speed: 5000,
+            autoplaySpeed: 500,
             cssEase: "linear",
-            centerMode: true
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 678,
+                    settings: {
+                        dots: true,
+                        infinite: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        speed: 5000,
+                        autoplaySpeed: 500,
+                        cssEase: "linear",
+                        centerMode: true,
+                    }
+
+                }
+            ]
         };
         return (
             <div className={styles.testimonialContainer}>
