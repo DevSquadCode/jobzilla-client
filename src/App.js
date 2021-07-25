@@ -1,12 +1,11 @@
-import './App.css';
-import Banner from './components/Header/Banner';
+import Banner from './components/Header/banner/Banner';
 import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-    <Header></Header>
-    <Banner></Banner>
+    <div>
+      <Header />
+      <Banner />
     </div>
   );
 }

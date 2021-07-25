@@ -1,0 +1,27 @@
+.brand-text-color{
+    /* color: #304ffe; */
+    /* color: #0c1442; */
+    /* color: #606480; */
+    /* color: #006AFF; */
+    color: rgb(34, 219, 34);
+    /* color: #8D93AB; */
+}
+
+.btn-brand{
+    color: rgb(255, 255, 255);
+    padding: 7px 25px;
+    border: none;
+    background-color: rgb(34, 219, 34);
+}
+
+.btn-brand-outline{
+    padding: 10px 25px;
+    color: rgb(34, 219, 34);
+    border: 1px solid rgb(34, 219, 34);
+    transition: all 0.5s ease;
+}
+
+.btn-brand-outline:hover{
+    color: white;
+    background-color: rgb(34, 219, 34);
+}
