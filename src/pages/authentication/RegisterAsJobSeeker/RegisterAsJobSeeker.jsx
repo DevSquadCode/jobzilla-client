@@ -7,6 +7,12 @@ import registerBanner from '../../../images/undraw_unlock_24mb.svg';
 
 
 const RegisterAsJobSeeker = () => {
+
+
+
+
+
+    
     return (
         <section>
             <Header />
@@ -15,8 +21,8 @@ const RegisterAsJobSeeker = () => {
                     <div className="col-md-7 shadow-sm rounded-3 border p-4 d-flex flex-column justify-center align-items-center">
                         <h3>Create Your Account</h3>
                         <div className="p-2 w-75">
-                            <label htmlFor="email">Official Email Id</label>
-                            <input type="text" className="form-control py-" id='email' placeholder='Name@Company_Name.com' />
+                            <label htmlFor="email">Email</label>
+                            <input type="text" className="form-control py-" id='email' placeholder='Name@example.com' />
                         </div>
                         <div className="p-2 w-75">
                             <label htmlFor="password">Password</label>
@@ -26,22 +32,11 @@ const RegisterAsJobSeeker = () => {
                             <div className="row">
                                 <div className="col-md-6">
                                     <label htmlFor="firstName">First Name</label>
-                                    <input type="text" className='form-control py-2' id='firstName' placeholder='Patrick'/>
+                                    <input type="text" className='form-control py-2' id='firstName' placeholder='John'/>
                                 </div>
                                 <div className="col-md-6">
                                     <label htmlFor="lastName">Last Name</label>
-                                    <input type="text" className='form-control py-2' id='lastName' placeholder='Williams'/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="p-2 w-75">
-                            <label htmlFor="mobile">Mobile Number</label>
-                            <div className="row">
-                                <div className="col-3">
-                                    <input type="text" className='form-control py-2' value='+88'/>
-                                </div>
-                                <div className="col-9">
-                                    <input className='form-control py-2' type="number" name="" id="mobile" placeholder='11 Digit Mobile Number' />
+                                    <input type="text" className='form-control py-2' id='lastName' placeholder='Doe'/>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +45,7 @@ const RegisterAsJobSeeker = () => {
                         <div className="w-75 text-center py-3">
                             <p>
                                 Have an Account ? Please <Link to="/login">
-                                    <button className='btn btn-info rounded'>
+                                    <button className='btn text-info border'>
                                         Login                                        
                                     </button>
                                 </Link>                
