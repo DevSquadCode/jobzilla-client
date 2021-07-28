@@ -1,0 +1,17 @@
+.cardList{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: ghostwhite;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-apply > h5{
+    color: white;
+    background-color: rgb(34, 219, 34);
+    padding: 10px;
+    border-radius: 10px;
+}
