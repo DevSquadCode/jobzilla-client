@@ -6,6 +6,7 @@ import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import { emailRegex, passRegex } from '../../../components/Regexp/Regexp';
+import { loginManager } from '../../../utils/CommonUtils';
 
 
 
@@ -44,6 +45,11 @@ const Login = () => {
         };
     };
 
+    const handleLogin = e => {
+        e.preventDefault();
+        loginManager(loginInfo.email, loginInfo.password)
+    };
+
     return (
         <section className=''>
             <Header />
@@ -67,7 +73,7 @@ const Login = () => {
                                 inputError?.name === 'password' && <p className='text-danger text-center'>{inputError?.errorMessage}</p>
                             }
                         </div>
-                        <button className="btn btn-outline-info w-50 mt-2">Login</button>
+                        <button onClick={handleLogin} className="btn btn-outline-info w-50 mt-2">Login</button>
                         <div className="w-75 text-center py-3">
                             <p>New to Job-Zilla ?</p>
                             <div className="d-flex justify-content-evenly">
