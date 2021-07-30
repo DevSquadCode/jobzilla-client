@@ -1,55 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { HiOutlineMail } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import loginBanner from '../../../images/undraw_unlock_24mb.svg';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
-import { emailRegex, passRegex } from '../../../components/Regexp/Regexp';
-import { loginManager } from '../../../utils/CommonUtils';
+import firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from './firebase.config';
+import {useHistory} from 'react-router-dom';
+
+
+firebase.initializeApp(firebaseConfig);
 
 
 
 
 const Login = () => {
-    const [inputError, setInputError] = React.useState({});
-    const [loginInfo, setLoginInfo] = React.useState({});
 
+    // const [user, setUser] = useState();
+    const history = useHistory();
 
-    const handleInputValidation = e => {
-        const inputType = e.target.type;
-        const inputValue = e.target.value;
-        const info = {...loginInfo};
-        if(inputType === 'email'){
-            if(!emailRegex.test(inputValue)){
-                setInputError({name: inputType, errorMessage: 'Please Type a Valid Email !'})
-                info[inputType] = null;
-                setLoginInfo(info)
-            }else{
-                setInputError(null);
-                info[inputType] = inputValue;
-                setLoginInfo(info)
-            };
-        };
-        if(inputType === 'password'){
-            if(!passRegex.test(inputValue)){
-                setInputError({name: inputType, errorMessage: 'Must be more than 8 chars combine with uppercase and lowercase, and at least one number'})
-                info[inputType] = null;
-                setLoginInfo(info)
-            }
-            else{
-                setInputError(null)
-                info[inputType] = inputValue;
-                setLoginInfo(info)
-            }
-        };
-    };
-
-    const handleLogin = e => {
-        e.preventDefault();
-        loginManager(loginInfo.email, loginInfo.password)
-    };
-
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const handleSignIn = () => {
+        
+        firebase.auth().signInWithPopup(provider)
+        .then(res => {
+            console.log(res);
+            history.push('/home')
+        })
+        .catch(err => {
+            console.log(err);
+            
+        })
+    }
     return (
         <section className=''>
             <Header />
@@ -60,20 +44,15 @@ const Login = () => {
                         <div className="w-75 py-2">
                             <HiOutlineMail className='fs-3 my-2 text-info' />
                             <label htmlFor="email" className='px-2'>Email</label>
-                            <input onChange={handleInputValidation} type="email" className="form-control py-3 d-block" placeholder='John@Example.com' />
-                            {
-                                inputError?.name === 'email' && <p className='text-danger text-center'>{inputError?.errorMessage}</p>
-                            }
+                            <input type="email" className="form-control py-3 d-block" placeholder='John@Example.com' />
                         </div>
                         <div className="w-75 py-2">
                             <RiLockPasswordLine className='fs-3 my-2 text-info' />
                             <label htmlFor="email" className='px-2'>Password</label>
-                            <input onChange={handleInputValidation} type="password" className="form-control py-3" placeholder="Must be atleast 6 Characters" />
-                            {
-                                inputError?.name === 'password' && <p className='text-danger text-center'>{inputError?.errorMessage}</p>
-                            }
+                            <input type="password" className="form-control py-3" placeholder="Must be atleast 6 Characters" />
                         </div>
-                        <button onClick={handleLogin} className="btn btn-outline-info w-50 mt-2">Login</button>
+                        <button className="btn btn-outline-info w-50 mt-2">Login</button>
+                        <button className="btn btn-outline-info w-50 mt-2" onClick={handleSignIn}>Login With Google</button>
                         <div className="w-75 text-center py-3">
                             <p>New to Job-Zilla ?</p>
                             <div className="d-flex justify-content-evenly">
@@ -86,6 +65,7 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="col-md-5 d-flex justify-content-center align-items-center">
                         <img className='img-fluid' src={loginBanner} alt="" />
                     </div>
