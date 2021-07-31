@@ -7,7 +7,7 @@ const ReviewCard = (props) => {
     const { name, post, company, image, feedback } = props.data;
     return (
         <div className={reviewCard}>
-            <p className={reviewText}><FaQuoteLeft />{feedback}</p>
+            <p className={reviewText}><FaQuoteLeft />  {feedback}</p>
 
             <div className="d-flex">
                 <img className={reviewImage} src={image} alt="" />
