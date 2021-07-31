@@ -1,49 +1,26 @@
-// import React from 'react';
-// import { Carousel } from 'react-bootstrap';
-// import ReviewCard from './ReviewCard/ReviewCard';
-// import testimonialData from './testimonialData.json'
-// import styles from './Testimonial.module.css'
-// const timeStamp = 4000;
-
-
-// const Testimonial = () => {
-//     return (
-//         <div className={styles.testimonialContainer}>
-//             <h1>Testimonial</h1>
-
-//             <Carousel fade={false} controls={false} indicators={false} pause={false}>
-
-//                 {
-//                     testimonialData.map(data =>
-//                         <Carousel.Item interval={timeStamp}>
-//                             <div className="d-flex justify-content-evenly">
-//                                 <ReviewCard data={data}></ReviewCard>
-//                                 <ReviewCard data={data}></ReviewCard>
-//                                 <ReviewCard data={data}></ReviewCard>
-//                             </div>
-//                         </Carousel.Item>)
-//                 }
-
-//             </Carousel>
-
-
-//         </div>
-//     );
-// };
-
-// export default Testimonial;
-
-// -----------------------------------------------------
-
 import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from './Testimonial.module.css'
-import testimonialData from './testimonialData.json'
+// import testimonialData from './testimonialData.json'
 import ReviewCard from "./ReviewCard/ReviewCard";
 
+
+
 export default class AutoPlay extends Component {
+    state = {
+        testimonialData: []
+    }
+
+    componentDidMount() {
+        fetch('https://aqueous-cove-89051.herokuapp.com/testimonials')
+            .then((response) => response.json())
+            .then(data => {
+                this.setState({ testimonialData: data });
+            });
+    }
+
     render() {
         const settings = {
             dots: true,
@@ -73,12 +50,13 @@ export default class AutoPlay extends Component {
                 }
             ]
         };
+
         return (
             <div className={styles.testimonialContainer}>
                 <h2 className='text-center m-4'>Testimonial</h2>
                 <Slider {...settings}>
                     {
-                        testimonialData.map(data => <ReviewCard data={data} ></ReviewCard>)
+                        this.state.testimonialData.map(data => <ReviewCard data={data} ></ReviewCard>)
                     }
                 </Slider>
             </div>

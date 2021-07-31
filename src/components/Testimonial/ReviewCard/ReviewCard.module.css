@@ -2,6 +2,8 @@
     background-color: #F8F8FF;
     width: 75%;
     border-radius: 12px;
+    padding: 10px;
+    
 }
 
 .reviewImage{
@@ -14,6 +16,8 @@
 
 .reviewText{
     padding: 12px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .reviewPerson{
@@ -24,7 +28,7 @@
 
 @media (max-width:668px) {
     .reviewCard{
-        background-color: #6ee9f5;
+        background-color: #F8F8FF;
         width: 95%;
         border-radius: 12px;
     }
@@ -41,6 +45,8 @@
     .reviewText{
         padding: 12px;
         font-size: 12px;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .reviewPerson h5{
