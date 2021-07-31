@@ -12,18 +12,16 @@ const Home = () => {
         <>
             <Header />
             <Banner />
-// <<<<<<< categories
 
             <Categories />
             <Jobpost />
 
             <Testimonial/>
 
-// =======
-            <Categories />
+            {/* <Categories />
             <Jobpost />
-            <Testimonial/>
-// >>>>>>> main
+            <Testimonial/> */}
+
             <Footer />
         </>
     );
