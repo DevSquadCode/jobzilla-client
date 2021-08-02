@@ -9,6 +9,7 @@ import Login from './pages/authentication/Login/Login.jsx';
 import RegisterAsJobSeeker from './pages/authentication/RegisterAsJobSeeker/RegisterAsJobSeeker.jsx';
 import RegisterAsRecruiter from './pages/authentication/RegisterAsRecruiter/RegisterAsRecruiter.jsx';
 import AddReview from './components/AddReview/AddReview.js';
+import CreateCandidateProfile from './components/Candidates/CreateCandidateProfile/CreateCandidateProfile.js';
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path='/addReview'>
           <AddReview />
+        </Route>
+        <Route path='/createCandidateProfile'>
+          <CreateCandidateProfile></CreateCandidateProfile>
         </Route>
         <Route exact path='/'>
           <Home />
