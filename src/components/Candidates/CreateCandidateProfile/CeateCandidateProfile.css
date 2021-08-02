@@ -1,0 +1,19 @@
+
+form .name, .email, .number, .github, .linkedIn, .portfolio, .projectField{
+    width: 90%;
+    padding: 5px;
+    
+}
+
+form .presentAddress, .educationLevel, .institution, .jobTitle, .startDate, .skillName{
+    margin-right: 30px;
+    padding: 5px;
+    width: 90%;
+
+}
+
+form .permanentAddress, .passingYear, .degree, .company, .endDate, .experience{
+    padding: 5px;
+    width: 90%;
+
+}
