@@ -1,19 +1,25 @@
 
+.formField{
+    background-color: #F5F7FB;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 form .name, .email, .number, .github, .linkedIn, .portfolio, .projectField{
     width: 90%;
-    padding: 5px;
-    
+    padding: 7px;
+    border: none;
 }
 
 form .presentAddress, .educationLevel, .institution, .jobTitle, .startDate, .skillName{
-    margin-right: 30px;
-    padding: 5px;
+    padding: 7px;
     width: 90%;
-
+    border: none;
 }
 
 form .permanentAddress, .passingYear, .degree, .company, .endDate, .experience{
-    padding: 5px;
+    padding: 7px;
     width: 90%;
-
+    border: none;
 }
+
