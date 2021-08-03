@@ -10,6 +10,7 @@ import RegisterAsJobSeeker from './pages/authentication/RegisterAsJobSeeker/Regi
 import RegisterAsRecruiter from './pages/authentication/RegisterAsRecruiter/RegisterAsRecruiter.jsx';
 import AddReview from './components/AddReview/AddReview.js';
 import CreateCandidateProfile from './components/Candidates/CreateCandidateProfile/CreateCandidateProfile.js';
+import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/ShowCandidateProfile.js';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path='/createCandidateProfile'>
           <CreateCandidateProfile></CreateCandidateProfile>
+        </Route>
+        <Route path='/showCandidateProfile'>
+          <ShowCandidateProfile />
         </Route>
         <Route exact path='/'>
           <Home />
