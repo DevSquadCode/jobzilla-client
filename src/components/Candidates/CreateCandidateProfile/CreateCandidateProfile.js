@@ -1,4 +1,5 @@
 import React from 'react';
+import Sidebar from '../../Shared/Sidebar/Sidebar';
 import './CreateCandidateProfile.css'
 
 const CreateCandidateProfile = () => {
@@ -6,7 +7,7 @@ const CreateCandidateProfile = () => {
         <div className="formField">
             <div className="row ">
            <div className="col-md-2">
-
+            <Sidebar></Sidebar>
            </div>
 
            <div className="col-md-10">
