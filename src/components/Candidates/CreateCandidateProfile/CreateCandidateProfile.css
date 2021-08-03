@@ -5,21 +5,19 @@
     overflow: hidden;
 }
 
-form .name, .email, .number, .github, .linkedIn, .portfolio, .projectField{
+form .name, .email, .number, .github, .linkedIn, .portfolio, .projectField, .presentAddress, .educationLevel, .institution, .jobTitle, .startDate, .skillName, .permanentAddress, .passingYear, .degree, .company, .endDate, .experience{
     width: 90%;
     padding: 7px;
     border: none;
 }
 
-form .presentAddress, .educationLevel, .institution, .jobTitle, .startDate, .skillName{
-    padding: 7px;
-    width: 90%;
-    border: none;
-}
-
-form .permanentAddress, .passingYear, .degree, .company, .endDate, .experience{
-    padding: 7px;
-    width: 90%;
-    border: none;
+form .btn{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 20%;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 10px;
 }
 
