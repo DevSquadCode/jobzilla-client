@@ -5,7 +5,7 @@ import './CreateCandidateProfile.css'
 const CreateCandidateProfile = () => {
     return (
         <div className="formField">
-            <div className="row ">
+            <div className="row">
            <div className="col-md-2">
             <Sidebar></Sidebar>
            </div>

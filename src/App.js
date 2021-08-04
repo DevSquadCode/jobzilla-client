@@ -12,6 +12,7 @@ import AddReview from './components/AddReview/AddReview.js';
 import CreateCandidateProfile from './components/Candidates/CreateCandidateProfile/CreateCandidateProfile.js';
 import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/ShowCandidateProfile.js';
 import Sidebar from './components/Shared/Sidebar/Sidebar.js';
+import CreateBlogs from './components/Blogs/CreateBlogs'
 
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
         </Route>
         <Route path='/showCandidateProfile'>
           <ShowCandidateProfile />
+        </Route>
+        <Route path='/createBlogs'>
+          <CreateBlogs/>
+        </Route>
         <Route path='/sidebar'>
           <Sidebar></Sidebar>
         </Route>
