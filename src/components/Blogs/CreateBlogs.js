@@ -1,16 +1,16 @@
 import React from "react";
 import { Card, Container, Row } from "react-bootstrap";
 import blogImage from "../../images/banner.webp";
+import Header from "../Header/Header";
 import CSS from "./CreateBlogs.css";
 
 const CreateBlogs = () => {
   return (
     <Container className="d-flex card">
-
-    <button type="button" class="btn btn-success">Create Blogs</button>
+        <Header />
+        <button type="button" class="btn btn-success button">Create Blogs</button>
         
-
-      <Row className="col-md-12">
+        <Row className="col-md-12">
         
         <Card border="primary" style={{ width: "18rem" }}>
           {/* <Card.Header>Header</Card.Header> */}
