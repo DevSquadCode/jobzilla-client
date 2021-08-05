@@ -1,11 +1,12 @@
 import React from 'react';
 import { Badge } from 'react-bootstrap';
+import Sidebar from '../../Shared/Sidebar/Sidebar'
 
 const ShowCandidateProfile = () => {
     return (
-        <div className="row mt-5">
+        <div className="row">
             <div className="col-md-2">
-
+                <Sidebar />
             </div>
 
             <div className="col-md-10">

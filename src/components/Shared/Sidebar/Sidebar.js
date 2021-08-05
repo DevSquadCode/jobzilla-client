@@ -21,10 +21,14 @@ const Sidebar = () => {
                 <i class="fas fa-list-ul"></i> <span>Job Listing</span>
                 </li>
                 <li>
-                <i class="fas fa-file"></i> <span>Add Resume</span>
+                    <Link className="text-white link" to='/createCandidateProfile'>
+                        <i class="fas fa-file"></i> <span> Create Candidate Profile</span>
+                    </Link>
                 </li>
                 <li>
-                <i class="fas fa-address-card"></i> <span>User Profile</span>
+                    <Link className="text-white link" to='/showCandidateProfile'>
+                        <i class="fas fa-address-card"></i> <span>Candidate Profile</span>
+                    </Link>
                 </li>
             </ul>
 

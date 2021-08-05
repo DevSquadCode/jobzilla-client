@@ -28,7 +28,7 @@ const Header = () => {
           <a id='menu' class="nav-link" href="#">Register</a>
         </li>
         <li class="nav-item">
-          <a id='menu' class="nav-link" href="#">Post a Job</a>
+                <Link id='menu' class="nav-link" to='/showCandidateProfile'> Dashboard</Link>
         </li>
         <li class="nav-item">
                 <Link id='logMenu' class="nav-link" to='/login'>Log In</Link>
