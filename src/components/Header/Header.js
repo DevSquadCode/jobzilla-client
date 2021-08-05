@@ -28,6 +28,9 @@ const Header = () => {
           <a id='menu' class="nav-link" href="#">Register</a>
         </li>
         <li class="nav-item">
+                <Link id='menu' class="nav-link" to='/blogs'> Blogs</Link>
+        </li>
+        <li class="nav-item">
                 <Link id='menu' class="nav-link" to='/showCandidateProfile'> Dashboard</Link>
         </li>
         <li class="nav-item">

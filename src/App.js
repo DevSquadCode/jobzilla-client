@@ -39,7 +39,7 @@ function App() {
         <Route path='/showCandidateProfile'>
           <ShowCandidateProfile />
         </Route>
-        <Route path='/createBlogs'>
+        <Route path='/blogs'>
           <CreateBlogs/>
         </Route>
         <Route exact path='/'>
