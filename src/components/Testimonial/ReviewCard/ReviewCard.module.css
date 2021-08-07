@@ -8,6 +8,8 @@
 
 .reviewImage{
     /* rounded-circle ml-3 mb-3 w-75 */
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -36,6 +38,7 @@
     .reviewImage{
         /* rounded-circle ml-3 mb-3 w-75 */
         width: 80px;
+        height: 80px;
         border-radius: 50%;
         margin-left: 2px;
         margin-bottom: 10px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-
+import Sidebar from '../Shared/Sidebar/Sidebar'
 
 const AddReview = () => {
     const [reviewData, setReviewData] = useState({})
@@ -56,7 +56,7 @@ const AddReview = () => {
     return (
         <div className="container-fluid row">
             <div className="col-md-2">
-
+                <Sidebar />
             </div>
             <div className="col-md-10">
                 <div className='d-flex justify-content-center'>
