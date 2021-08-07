@@ -12,7 +12,6 @@ const Home = () => {
         <>
             <Header />
             <Banner />
-
             <Categories />
             <Jobpost />
             <Testimonial/>
