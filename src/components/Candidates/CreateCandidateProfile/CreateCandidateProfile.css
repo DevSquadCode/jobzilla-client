@@ -1,0 +1,23 @@
+
+.formField{
+    background-color: #F5F7FB;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+form .name, .email, .number, .github, .linkedIn, .portfolio, .projectField, .presentAddress, .educationLevel, .institution, .jobTitle, .startDate, .skillName, .permanentAddress, .passingYear, .degree, .company, .endDate, .experience{
+    width: 90%;
+    padding: 7px;
+    border: none;
+}
+
+form .btn{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 20%;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 10px;
+}
+

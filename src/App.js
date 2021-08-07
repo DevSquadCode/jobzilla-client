@@ -9,6 +9,9 @@ import Login from './pages/authentication/Login/Login.jsx';
 import RegisterAsJobSeeker from './pages/authentication/RegisterAsJobSeeker/RegisterAsJobSeeker.jsx';
 import RegisterAsRecruiter from './pages/authentication/RegisterAsRecruiter/RegisterAsRecruiter.jsx';
 import AddReview from './components/AddReview/AddReview.js';
+import CreateCandidateProfile from './components/Candidates/CreateCandidateProfile/CreateCandidateProfile.js';
+import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/ShowCandidateProfile.js';
+import CreateBlogs from './components/Blogs/CreateBlogs'
 
 
 function App() {
@@ -29,6 +32,15 @@ function App() {
         </Route>
         <Route path='/addReview'>
           <AddReview />
+        </Route>
+        <Route path='/createCandidateProfile'>
+          <CreateCandidateProfile></CreateCandidateProfile>
+        </Route>
+        <Route path='/showCandidateProfile'>
+          <ShowCandidateProfile />
+        </Route>
+        <Route path='/blogs'>
+          <CreateBlogs/>
         </Route>
         <Route exact path='/'>
           <Home />
