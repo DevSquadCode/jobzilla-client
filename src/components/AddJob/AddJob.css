@@ -8,13 +8,11 @@
     background-color: #F5F7FB;
     min-height: 100vh;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .form{
     padding: 20px;
+    margin-left: 5%;
 }
 
 form input{
