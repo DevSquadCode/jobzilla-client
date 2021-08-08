@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../../Shared/Sidebar/Sidebar';
 import './CreateCandidateProfile.css'
 
 const CreateCandidateProfile = () => {
+
+    const [profile, setProfile] = useState()
+
+
     return (
         <div className="formField">
             <div className="row ">
