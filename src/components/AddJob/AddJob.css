@@ -8,6 +8,9 @@
     background-color: #F5F7FB;
     min-height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form{
@@ -29,6 +32,8 @@ border: none;
         flex-wrap: wrap;
         width: 90%;
     }
-  
+    form input{
+        width: 90%;
+    }
 }
 
