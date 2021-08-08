@@ -15,45 +15,22 @@ firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
   const history = useHistory();
-  const [signInInfo, setaSignInInfo] = useState();
-
-  const handleInput = (e) =>{
-    e.preventDefault()
-    const info = {...signInInfo}
-    info[e.target.name] = e.target.value
-    setaSignInInfo(info)
-
-  }
-
-  const handleSignIn =()=>{
-   firebase.auth().signInWithEmailAndPassword(signInInfo.email, signInInfo.password)
-  .then((userCredential) => {
-    // Signed in
-    console.log("Signed in");
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.log(errorMessage);
-  });
-  }
+  
  
-  // const handleGoogleSignIn = () => {
+  const handleSignIn = () => {
     
-  //   const provider = new firebase.auth.GoogleAuthProvider();
-  //   firebase
-  //     .auth()
-  //     .signInWithPopup(provider)
-  //     .then((res) => {
-  //       console.log(res);
-  //       history.push("/home");
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((res) => {
+        console.log(res);
+        history.push("/home");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <section className="">
@@ -73,8 +50,6 @@ const Login = () => {
                 Email
               </label>
               <input
-                onChange={handleInput}
-                name="email"
                 type="email"
                 className="form-control py-3 d-block"
                 placeholder="John@Example.com"
@@ -87,22 +62,20 @@ const Login = () => {
                 Password
               </label>
               <input
-              onChange={handleInput}
-              name="password"
                 type="password"
                 className="form-control py-3"
-                placeholder="Must be at-least 6 Characters"
+                placeholder="Must be atleast 6 Characters"
                 
               />
             </div>
-            <button onClick={handleSignIn} className="btn btn-outline-info w-50 mt-2">Login</button>
+            <button className="btn btn-outline-info w-50 mt-2">Login</button>
            
-            {/* <button
+            <button
               className="btn btn-outline-info w-50 mt-2"
-              onClick={handleGoogleSignIn}
+              onClick={handleSignIn}
             >
               Login With Google
-            </button> */}
+            </button>
             <div className="w-75 text-center py-3">
               <p>New to Job-Zilla ?</p>
               <div className="d-flex justify-content-evenly">

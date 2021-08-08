@@ -53,6 +53,8 @@ const RegisterAsJobSeeker = () => {
     }
   };
 
+  console.log(inputError);
+
   const handleRegister = (e) => {
     e.preventDefault();
     if (regInfo.email && regInfo.password) {
@@ -61,8 +63,8 @@ const RegisterAsJobSeeker = () => {
         .auth()
         .createUserWithEmailAndPassword(regInfo.email, regInfo.password)
         .then((userCredential) => {
+          // Signed in
           var regInfo = userCredential.regInfo;
-          addCandidateToDB()
           history.push('/login')
           
         })
@@ -75,21 +77,6 @@ const RegisterAsJobSeeker = () => {
       alert("information invalid");
     }
   };
-
-  const addCandidateToDB = () =>{
-    const user = {
-      role: "Candidate",
-      email: regInfo.email
-    }
-    console.log(user);
-    fetch('http://localhost:8080/addUser',
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(user)
-
-  })
-  }
 
   return (
     <section>
