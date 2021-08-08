@@ -12,6 +12,39 @@ const AddJob = () => {
         setJobData(newData);
     }
 
+
+    const handleSubmit = e => {
+
+        const formData = {
+            name: jobData.name,
+            title: jobData.title,
+            description: jobData.description,
+            skills: jobData.skills,
+            vacancy: jobData.vacancy,
+            complaint: jobData.complaint,
+            deadline: jobData.deadline,
+            website: jobData.website
+        }
+
+        fetch('', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(formData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data) {
+                    alert("Job Posted successfully!")
+                }
+            })
+            .catch(error => {
+                console.error(error)
+            })
+
+            e.preventDefault();
+    }
+
    
     return (
         <div className="addJobForm">
@@ -21,7 +54,7 @@ const AddJob = () => {
                 </div>
                 <div className="col-md-10">
                 <div className="form">
-                <form action="">
+                <form onSubmit={handleSubmit}>
                 <h4>Company Name</h4>
                 <input type="text" onBlur={handleBlur} />
                 <br /><br />
