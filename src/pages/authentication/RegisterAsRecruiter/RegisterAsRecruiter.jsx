@@ -4,12 +4,16 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 import { bdNumberRegex, emailRegex, passRegex } from '../../../components/Regexp/Regexp';
 import registerBanner from '../../../images/undraw_unlock_24mb.svg';
-
+import firebase from "firebase/app";
+import "firebase/auth";
+import {useHistory} from 'react-router-dom';
 
 
 const RegisterAsRecruiter = () => {
     const [inputError, setInputError] = React.useState({});
     const [regInfo, setRegInfo] = React.useState({});
+    const history = useHistory();
+
     // console.log(regInfo);
     const handleInputValidation = e => {
         const inputName = e.target.name;
@@ -53,15 +57,45 @@ const RegisterAsRecruiter = () => {
     };
 
 
-
-    const handleRegister = e => {
-        e.preventDefault()
-        if(regInfo.email && regInfo.password){
-            alert('information correct')
-        }else{
-            alert('information invalid')
-        }
+    
+  const handleRegister = (e) => {
+    e.preventDefault();
+    if (regInfo.email && regInfo.password) {
+      alert("Register Success, Please Login");
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(regInfo.email, regInfo.password)
+        .then((userCredential) => {
+          var regInfo = userCredential.regInfo;
+          addRecruiterToDB()
+          history.push('/login')
+          
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // ..
+        });
+    } else {
+      alert("information invalid");
     }
+  };
+
+  const addRecruiterToDB = () =>{
+    const user = {
+      role: "Recruiter",
+      email: regInfo.email
+    }
+    // console.log(user);
+    fetch('http://localhost:8080/addUser',
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user)
+
+  })
+  }
+
 
     return (
         <section>
