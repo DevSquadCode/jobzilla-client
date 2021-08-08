@@ -104,7 +104,6 @@ const RegisterAsRecruiter = () => {
   .catch(error => {
       console.error(error)
   })
-// }
   }
 
 
