@@ -10,7 +10,7 @@ import registerBanner from '../../../images/undraw_unlock_24mb.svg';
 const RegisterAsRecruiter = () => {
     const [inputError, setInputError] = React.useState({});
     const [regInfo, setRegInfo] = React.useState({});
-
+    // console.log(regInfo);
     const handleInputValidation = e => {
         const inputName = e.target.name;
         const inputValue = e.target.value;
@@ -53,7 +53,6 @@ const RegisterAsRecruiter = () => {
     };
 
 
-    console.log(regInfo)
 
     const handleRegister = e => {
         e.preventDefault()
