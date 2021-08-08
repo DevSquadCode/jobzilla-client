@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-  <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+  <nav className="navbar shadow fixed-top navbar-expand-lg navbar-light bg-transparent">
   <div className="container">
    <Link className="navbar-brand" to="/"> <h2>JOBZILLA</h2></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

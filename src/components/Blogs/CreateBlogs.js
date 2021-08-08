@@ -10,7 +10,7 @@ const CreateBlogs = () => {
       <Header />
       <Container>
         <Row>
-          <Col className="my-5 py-3">
+          <Col className="">
             <button type="button" class="btn px-3 py-2 blog_btn">
               CREATE BLOG
             </button>
