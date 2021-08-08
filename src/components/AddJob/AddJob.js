@@ -44,11 +44,11 @@ const addJob = () => {
                 <div className="dateLine">
                     <div className="propose">
                         <h5>Date of Complaint</h5>
-                        <input type="date" />
+                        <input className="w-100" type="date" />
                     </div>
                     <div className="deadLine">
                     <h5>Apply By</h5>
-                        <input type="date" />
+                        <input className="w-100" type="date" />
                     </div>
                 </div>
                 <br /><br />
