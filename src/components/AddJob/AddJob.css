@@ -1,13 +1,34 @@
 .skillSet, .dateLine, .jobDesc{
     display: flex;
     justify-content: space-between;
-    width: 30%;
-    /* flex-wrap: wrap; */
+    width: 50%;
+}
+
+.addJobForm{
+    background-color: #F5F7FB;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.form{
+    padding: 20px;
+}
+
+form input{
+    border: none;
+    width: 50%;
+    padding: 7px;
+}
+
+form textarea{
+border: none;
 }
 
 @media (max-width: 668px){
     .skillSet, .dateLine, .jobDesc{
         flex-wrap: wrap;
+        width: 90%;
     }
+  
 }
 
