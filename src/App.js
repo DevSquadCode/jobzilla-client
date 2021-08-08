@@ -12,7 +12,7 @@ import AddReview from './components/AddReview/AddReview.js';
 import CreateCandidateProfile from './components/Candidates/CreateCandidateProfile/CreateCandidateProfile.js';
 import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/ShowCandidateProfile.js';
 import CreateBlogs from './components/Blogs/CreateBlogs'
-
+import AddJob from './components/AddJob/AddJob'
 
 function App() {
   return (
@@ -38,6 +38,9 @@ function App() {
         </Route>
         <Route path='/showCandidateProfile'>
           <ShowCandidateProfile />
+        </Route>
+        <Route path='/addJob'>
+          <AddJob></AddJob>
         </Route>
         <Route path='/blogs'>
           <CreateBlogs/>

@@ -1,0 +1,13 @@
+.skillSet, .dateLine, .jobDesc{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    /* flex-wrap: wrap; */
+}
+
+@media (max-width: 668px){
+    .skillSet, .dateLine, .jobDesc{
+        flex-wrap: wrap;
+    }
+}
+
