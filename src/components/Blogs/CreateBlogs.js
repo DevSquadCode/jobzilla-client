@@ -6,10 +6,10 @@ import './CreateBlogs.css'
 
 const CreateBlogs = () => {
   return (
-    <Container fluid="true">
+    <Container fluid="true" style={{marginTop:"130px"}}>
       <Header />
       <Container>
-        <Row>
+        <Row style={{marginBottom:"40px"}}>
           <Col className="">
             <button type="button" class="btn px-3 py-2 blog_btn">
               CREATE BLOG

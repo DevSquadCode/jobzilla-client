@@ -65,7 +65,7 @@ const RegisterAsRecruiter = () => {
     }
 
     return (
-        <section>
+        <section style={{marginTop:"130px"}}>
             <Header />
             <div className="container d-flex justify-content-center align-items-center py-5" style={{ minHeight: '100vh' }}>
                 <div className="row">

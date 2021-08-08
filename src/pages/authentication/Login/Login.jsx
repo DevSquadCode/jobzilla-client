@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   return (
-    <section className="">
+    <section className="" style={{marginTop:"130px"}}>
       <Header />
       <div
         className="container d-flex justify-content-center align-items-center"

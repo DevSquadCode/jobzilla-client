@@ -30,9 +30,9 @@ const Header = () => {
         <li className="nav-item">
                 <Link id='menu' className="nav-link" to='/blogs'> BLOG</Link>
         </li>
-        {/* <li className="nav-item">
+        <li className="nav-item">
                 <Link id='menu' className="nav-link" to='/showCandidateProfile'> DASHBOARD</Link>
-        </li> */}
+        </li>
         <li className="nav-item">
                 <Link id='logMenu' className="nav-link" to='/login'>LOG IN</Link>
         </li>

@@ -79,7 +79,7 @@ const RegisterAsJobSeeker = () => {
   };
 
   return (
-    <section>
+    <section style={{marginTop:"130px"}}>
       <Header />
       <div
         className="container py-5 d-flex justify-content-center align-items-center"
