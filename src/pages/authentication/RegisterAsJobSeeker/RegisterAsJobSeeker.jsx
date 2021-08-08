@@ -89,10 +89,20 @@ const RegisterAsJobSeeker = () => {
       body: JSON.stringify(user)
 
   })
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+      if (data) {
+          console.log("Candidate added successfully!")
+      }
+  })
+  .catch(error => {
+      console.error(error)
+  })
   }
 
   return (
-    <section>
+    <section style={{marginTop:"130px"}}>
       <Header />
       <div
         className="container py-5 d-flex justify-content-center align-items-center"

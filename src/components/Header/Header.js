@@ -4,37 +4,37 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-  <div class="container">
-    <h2 >JobZilla</h2>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <nav className="navbar shadow fixed-top navbar-expand-lg navbar-light bg-transparent">
+  <div className="container">
+   <Link className="navbar-brand" to="/"> <h2>JOBZILLA</h2></Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-                <Link id='menu' class="nav-link active" aria-current="page" to="/home">Home</Link>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+                <Link id='menu' className="nav-link" aria-current="page" to="/home">HOME</Link>
         </li>
-        <li class="nav-item">
-          <a id='menu' class="nav-link" href="#">Jobs</a>
+        <li className="nav-item">
+          <a id='menu' className="nav-link" href="#">JOBS</a>
         </li>
-        <li class="nav-item">
-          <a id='menu' class="nav-link" href="#">Candidates</a>
+        <li className="nav-item">
+          <a id='menu' className="nav-link" href="#">CANDIDATES</a>
         </li>
-        <li class="nav-item">
-          <a id='menu' class="nav-link" href="#">About Us</a>
+        <li className="nav-item">
+          <a id='menu' className="nav-link" href="#">ABOUT US</a>
         </li>
-        <li class="nav-item">
-          <a id='menu' class="nav-link" href="#">Register</a>
+        <li className="nav-item">
+          <a id='menu' className="nav-link" href="#">REGISTER</a>
         </li>
-        <li class="nav-item">
-                <Link id='menu' class="nav-link" to='/blogs'> Blogs</Link>
+        <li className="nav-item">
+                <Link id='menu' className="nav-link" to='/blogs'> BLOG</Link>
         </li>
-        <li class="nav-item">
-                <Link id='menu' class="nav-link" to='/showCandidateProfile'> Dashboard</Link>
+        <li className="nav-item">
+                <Link id='menu' className="nav-link" to='/showCandidateProfile'> DASHBOARD</Link>
         </li>
-        <li class="nav-item">
-                <Link id='logMenu' class="nav-link" to='/login'>Log In</Link>
+        <li className="nav-item">
+                <Link id='logMenu' className="nav-link" to='/login'>LOG IN</Link>
         </li>
         
       </ul>

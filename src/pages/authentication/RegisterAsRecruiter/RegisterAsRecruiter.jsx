@@ -92,13 +92,23 @@ const RegisterAsRecruiter = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user)
-
+  })
+  
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+      if (data) {
+          console.log("Recruiter added successfully!")
+      }
+  })
+  .catch(error => {
+      console.error(error)
   })
   }
 
 
     return (
-        <section>
+        <section style={{marginTop:"130px"}}>
             <Header />
             <div className="container d-flex justify-content-center align-items-center py-5" style={{ minHeight: '100vh' }}>
                 <div className="row">

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './AddJob.css'
+import React from 'react';
+import './AddJob.css';
+import Sidebar from "../../components/Shared/Sidebar/Sidebar";
 
 const AddJob = () => {
 
@@ -14,9 +17,9 @@ const AddJob = () => {
    
     return (
         <div className="addJobForm">
-            <div className="row w-100">
+            <div className="row">
                 <div className="col-md-2">
-
+                <Sidebar></Sidebar>
                 </div>
                 <div className="col-md-10">
                 <div className="form">
@@ -64,6 +67,9 @@ const AddJob = () => {
                 <br /><br />
                 <h4>Company Website</h4>
                 <input type="url" onBlur={handleBlur}/>
+                <input type="url" />
+                <br /><br />
+                <button type="submit" className="btn btn-info w-50">Submit</button>
                 </form>
                 </div>
                 </div>

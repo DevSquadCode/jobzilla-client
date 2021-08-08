@@ -1,5 +1,5 @@
-.nav-link{
-    color: red;
+.navbar-brand{
+    margin-left: -10px;
 }
 
 #menu{
@@ -18,7 +18,7 @@
 }
 
 #logMenu{
-    margin-right: 10px;
+    margin-right: -11px;
     font-size: 18px;
     transition: all 0.5s ease;
     font-weight: 700;

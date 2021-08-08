@@ -1,6 +1,10 @@
 import React from 'react';
 import './Sidebar.css';
-import { AiFillControl, AiFillFileAdd, AiTwotoneHome } from "react-icons/ai";
+import { AiTwotoneHome, AiOutlineProfile } from "react-icons/ai";
+import { IoCreate } from "react-icons/io5";
+import { MdRateReview, MdWork } from "react-icons/md";
+
+
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -8,28 +12,27 @@ const Sidebar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" >
             <ul className="list-unstyled">
                 <li>
-                <Link to="/home" className="text-white link">
-                    <AiTwotoneHome /> <span>Home</span>
-                </Link>
-                
+                    <Link to="/home" className="text-white link"><AiTwotoneHome /> Home</Link>
                 </li>
-                <li>
-                <i class="fas fa-briefcase"></i> <span>Applied Jobs</span>
 
-                </li>
                 <li>
-                <i class="fas fa-list-ul"></i> <span>Job Listing</span>
+                    <Link to="/showCandidateProfile" className="text-white link"><AiOutlineProfile /> Candidate Profile</Link>
                 </li>
+
                 <li>
-                    <Link className="text-white link" to='/createCandidateProfile'>
-                        <i class="fas fa-file"></i> <span> Create Candidate Profile</span>
-                    </Link>
+                    <Link to="/createCandidateProfile" className="text-white link"><IoCreate /> Create Profile</Link>
                 </li>
+
                 <li>
-                    <Link className="text-white link" to='/showCandidateProfile'>
-                        <i class="fas fa-address-card"></i> <span>Candidate Profile</span>
-                    </Link>
+                    <Link to="/addJob" className="text-white link"><MdWork /> Post Job</Link>
                 </li>
+
+                <li>
+                    <Link to="/addReview" className="text-white link"><MdRateReview /> Add Review</Link>
+                </li>
+
+
+
             </ul>
 
         </div>
