@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import Banner from '../../components/Header/Banner';
+import Banner from '../../components/Header/banner/Banner';
 import Categories from '../../components/Categories/Categories';
 import Footer from '../../components/Footer/Footer';
 import Jobpost from '../../components/Categories/Jobpost';

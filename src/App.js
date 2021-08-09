@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import './global.css';
 import NotFound from './components/NotFound/NotFound.jsx';
 import Login from './pages/authentication/Login/Login.jsx';
 import RegisterAsJobSeeker from './pages/authentication/RegisterAsJobSeeker/RegisterAsJobSeeker.jsx';
