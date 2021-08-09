@@ -10,7 +10,7 @@ const ReviewCard = (props) => {
             <p className={reviewText}><FaQuoteLeft />  {feedback}</p>
 
             <div className="d-flex">
-                <img className={reviewImage} src={`data:image/png;base64,${props.data.image.img}`} alt="" />
+                {/* <img className={reviewImage} src={`data:image/png;base64,${props.data.image.img}`} alt="" /> */}
                 <div className={reviewPerson}>
                     <h5>{name}</h5>
                     <p>{post} <br /> {company} </p>
