@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImg from '../../../images/New Project.png';
+import bannerImg from '../../../images/banner.png';
 
 
 const Banner = () => {
@@ -25,12 +25,14 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row flex-column flex-column-reverse flex-md-row py-5 text-center text-md-start">
-                    <div className="col-md-6">
-                        <h2 className='py-2 brand-text-color'>Find your Dream Job Here </h2>
-                        <p className='text-secondary pb-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non temporibus fuga, nemo accusantium praesentium vel id quos quod voluptas distinctio!</p>
-                        <button className="btn-brand-outline w-25 me-3">Find a Job</button>
-                        <button className="btn-brand-outline w-25">Post a Job</button>
+                <div className="row flex-column flex-column-reverse flex-md-row text-center text-md-start">
+                    <div className="col-md-6 d-flex justify-content-center align-items-center">
+                        <div>
+                            <h2 className='py-2 brand-text-color'>Find your Dream Job Here </h2>
+                            <p className='text-secondary pb-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non temporibus fuga, nemo accusantium praesentium vel id quos quod voluptas distinctio!</p>
+                            <button className="btn-brand-outline w-25 me-3">Find a Job</button>
+                            <button className="btn-brand-outline w-25">Post a Job</button>
+                        </div>
                     </div>
                     <div className="col-md-6">
                         <img className='img-fluid' src={bannerImg} alt="" />
