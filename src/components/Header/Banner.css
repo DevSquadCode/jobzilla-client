@@ -1,13 +1,61 @@
-.inputGroup{
-    margin-top: 50px;
-    margin-right: 300px;
+.background{
+    /* background-image: url('../../images/background.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
 }
 
-.btnColor{
+.banner{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color{
+    color: rgb(25, 206, 25);
+}
+
+.seeker-employe{
+    border-radius: 50%;
+}
+
+.seeker{
+    margin-right: 5px;
+}
+
+.employee{
+    margin-left: 5px;
+}
+
+.seeker-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seeker-button{
+    background-color: rgb(25, 206, 25);
+    border-radius: 24px;
+    border: none;
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+    color: white;
+}
+
+.input-group{
+    margin-top: 30px;
+}
+
+.btn-color{
     background-color: rgb(25, 206, 25);
     border-radius: 5px;
+    color: white;
 }
 
-.dreamJob{
-    margin-top: 150px;
+#solid{
+    border: 2px solid rgb(25, 206, 25);
 }
