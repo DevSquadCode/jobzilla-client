@@ -2,20 +2,18 @@ import React from 'react';
 
 const SingleJob = (props) => {
 
-    const {title, type, logo} = props.singleJob;
+    const {name, title, jobType, deadline} = props.singleJob;
     console.log(props.singleJob)
     return (
         <div class="cardList">
               <div class="cardList-body">
-                <div className="icon">
-                <img src={logo} style={{width: '70px', height: '70px', borderRadius: '50%'}} alt="" />
-                </div>
-                <h4>{title}</h4>
-                <p>{type}</p>
+                <h3>{name}</h3>
+                <h5 style={{fontWeight: 400}}>{title}</h5>
+                <p>{jobType}</p>
               </div>
               <div className="card-apply text-center">
                 <h5>Apply Now</h5>
-                <p>Date line: 31 Jan 2021</p>
+                <p>Dead-line: {deadline}</p>
               </div>
             </div>
     );
