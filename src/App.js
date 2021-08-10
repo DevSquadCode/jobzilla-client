@@ -14,8 +14,10 @@ import CreateCandidateProfile from './components/Candidates/CreateCandidateProfi
 import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/ShowCandidateProfile.js';
 import CreateBlogs from './components/Blogs/CreateBlogs'
 import AddJob from './components/AddJob/AddJob'
+import AddBlogs from './components/Blogs/AddBlogs.js';
 
 function App() {
+
   return (
     <Router>
       <Switch>
@@ -45,6 +47,9 @@ function App() {
         </Route>
         <Route path='/blogs'>
           <CreateBlogs/>
+        </Route>
+        <Route path='/AddBlogs'>
+          <AddBlogs/>
         </Route>
         <Route exact path='/'>
           <Home />
