@@ -15,10 +15,15 @@ import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/S
 import CreateBlogs from './components/Blogs/CreateBlogs'
 import AddJob from './components/AddJob/AddJob'
 import AddBlogs from './components/Blogs/AddBlogs.js';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.js';
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <Switch>
         <Route path='/login'>
@@ -33,24 +38,24 @@ function App() {
         <Route path='/home'>
           <Home />
         </Route>
-        <Route path='/addReview'>
+          <PrivateRoute path='/addReview'>
           <AddReview />
-        </Route>
-        <Route path='/createCandidateProfile'>
+          </PrivateRoute>
+          <PrivateRoute path='/createCandidateProfile'>
           <CreateCandidateProfile></CreateCandidateProfile>
-        </Route>
-        <Route path='/showCandidateProfile'>
+          </PrivateRoute>
+          <PrivateRoute path='/showCandidateProfile'>
           <ShowCandidateProfile />
-        </Route>
-        <Route path='/addJob'>
+          </PrivateRoute>
+          <PrivateRoute path='/addJob'>
           <AddJob></AddJob>
-        </Route>
+          </PrivateRoute>
         <Route path='/blogs'>
           <CreateBlogs/>
         </Route>
-        <Route path='/AddBlogs'>
+          <PrivateRoute path='/AddBlogs'>
           <AddBlogs/>
-        </Route>
+          </PrivateRoute>
         <Route exact path='/'>
           <Home />
         </Route>
@@ -59,6 +64,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 
