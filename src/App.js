@@ -15,13 +15,10 @@ import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/S
 import CreateBlogs from './components/Blogs/CreateBlogs'
 import AddJob from './components/AddJob/AddJob'
 import AddBlogs from './components/Blogs/AddBlogs.js';
-<<<<<<< HEAD
 import SingleBlog from './components/Blogs/SingleBlog.js';
-=======
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.js';
 export const UserContext = createContext();
->>>>>>> 3e8b087883d89492801b04bf5b35e35ec9a0d854
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -56,17 +53,17 @@ function App() {
           </PrivateRoute>
         <Route path='/blogs'>
           <CreateBlogs/>
-        </Route>
+          </Route>
+
           <PrivateRoute path='/AddBlogs'>
           <AddBlogs/>
-<<<<<<< HEAD
-        </Route>
-        <Route path='/singleBlog'>
-          <SingleBlog/>
-        </Route>
-=======
           </PrivateRoute>
->>>>>>> 3e8b087883d89492801b04bf5b35e35ec9a0d854
+        
+        <PrivateRoute path='/singleBlog'>
+          <SingleBlog/>
+        
+          </PrivateRoute>
+          
         <Route exact path='/'>
           <Home />
         </Route>
@@ -74,6 +71,7 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
+
     </Router>
     </UserContext.Provider>
   );
