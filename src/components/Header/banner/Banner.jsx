@@ -5,7 +5,7 @@ import bannerImg from '../../../images/banner.png';
 const Banner = () => {
     return (
         <section className='py-4'>
-            <div className="container py-5">
+            <div className="container mt-5 py-5">
                 <div className="row py-3">
                     <div className="col-md-4 py-2">
                         <input className='form-control' type="search" placeholder='Search Job' />

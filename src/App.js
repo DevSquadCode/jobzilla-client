@@ -15,6 +15,7 @@ import ShowCandidateProfile from './components/Candidates/ShowCandidateProfile/S
 import CreateBlogs from './components/Blogs/CreateBlogs'
 import AddJob from './components/AddJob/AddJob'
 import AddBlogs from './components/Blogs/AddBlogs.js';
+import SingleBlog from './components/Blogs/SingleBlog.js';
 
 function App() {
 
@@ -50,6 +51,9 @@ function App() {
         </Route>
         <Route path='/AddBlogs'>
           <AddBlogs/>
+        </Route>
+        <Route path='/singleBlog'>
+          <SingleBlog/>
         </Route>
         <Route exact path='/'>
           <Home />

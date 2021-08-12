@@ -3,3 +3,11 @@
     color: #fff !important;
     font-weight: 700 !important;
 }
+
+.text{
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
