@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap";
 import Sidebar from "../Shared/Sidebar/Sidebar";
 
 const AddBlogs = () => {
-  const url = "http://localhost:8080/createBlogs"
+  const url = "https://aqueous-cove-89051.herokuapp.com/createBlogs"
 
     const [data, setData] = useState({
         "title": "",
