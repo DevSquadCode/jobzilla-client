@@ -8,15 +8,24 @@ import { Link } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebase.config";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
+import { UserContext } from "../../../App";
+import { useContext } from "react";
 
-
-firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: "/" } };
+
   const [signInInfo, setaSignInInfo] = useState();
 
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+} else {
+    firebase.app();
+}
   const handleInput = (e) =>{
     e.preventDefault()
     const info = {...signInInfo}
@@ -29,8 +38,10 @@ const Login = () => {
    firebase.auth().signInWithEmailAndPassword(signInInfo.email, signInInfo.password)
   .then((userCredential) => {
     // Signed in
-    console.log("Signed in");
     var user = userCredential.user;
+    setLoggedInUser({"email":user.email})
+    history.push(from);
+
     // ...
   })
   .catch((error) => {
