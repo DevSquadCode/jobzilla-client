@@ -41,7 +41,7 @@ const CreateCandidateProfile = () => {
             repo: profile.repo,
         }
 
-        fetch('https://aqueous-cove-89051.herokuapp.com/createCandidateProfil', {
+        fetch('https://aqueous-cove-89051.herokuapp.com/addCandidateProfile', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(formData)
@@ -94,7 +94,6 @@ const CreateCandidateProfile = () => {
                         <input name="institution" className="institution" type="text" placeholder="Institution Name" required onBlur={handleBlur}/>
                         <br /><br />
                         <input name="passing" className="passingYear" type="text" placeholder="Passing Year" required onBlur={handleBlur}/>
-                                <input className="name" type="text" name="name" placeholder="Your Name" id="" required onBlur={handleBlur}/>
                         <br /><br />
                  </div>
 
