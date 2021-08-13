@@ -1,16 +1,36 @@
 import React, { useState } from 'react';
 import Sidebar from '../../Shared/Sidebar/Sidebar';
-import './CreateCandidateProfile.css'
+import './CreateCandidateProfile.css';
+import axios from 'axios';
+
 
 const CreateCandidateProfile = () => {
 
     const [profile, setProfile] = useState({});
+    const [imageURL, setImageURL] = useState(null);
+
 
     const handleBlur = e => {
         const candidateData = {...profile};
         candidateData[e.target.name] = e.target.value;
         setProfile(candidateData);
         console.log(candidateData);
+    }
+
+    const handleImageUpload = event => {
+        console.log(event.target.files[0]);
+      const imageData = new FormData();
+      imageData.set('key', 'b86c0ab7beeb42c384775d3b62a113c0');
+      imageData.append('image', event.target.files[0])
+  
+      axios.post('https://api.imgbb.com/1/upload', imageData)
+        .then(function (response) {
+          setImageURL(response.data.data.display_url);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+  
     }
 
 
@@ -20,7 +40,7 @@ const CreateCandidateProfile = () => {
             name: profile.name,
             email: profile.email,
             phone: profile.phone,
-            filename: profile.filename,
+            imageURL: imageURL,
             presentAdd: profile.presentAdd,
             permanentAdd: profile.permanentAdd,
             education: profile.education,
@@ -80,7 +100,7 @@ const CreateCandidateProfile = () => {
                         <input name="phone" className="number" type="number"  placeholder="Your Phone Number" id="" required onBlur={handleBlur} />
                         <br /><br />
                         <h5>Upload Your Photo:</h5>
-                        <input name="file" className="file" type="file" required onBlur={handleBlur}/>
+                        <input name="file" className="file" type="file" required onChange={handleImageUpload}/>
                         <br /><br />
                         <input name="presentAdd" className="presentAddress" type="text" placeholder="Present Address" required onBlur={handleBlur}/>
                         <br /><br />
