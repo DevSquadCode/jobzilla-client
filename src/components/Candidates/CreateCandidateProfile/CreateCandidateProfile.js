@@ -41,7 +41,7 @@ const CreateCandidateProfile = () => {
             repo: profile.repo,
         }
 
-        fetch('', {
+        fetch('https://aqueous-cove-89051.herokuapp.com/createCandidateProfil', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(formData)
