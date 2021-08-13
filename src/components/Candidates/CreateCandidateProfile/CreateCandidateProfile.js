@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useState } from 'react';
 import Sidebar from '../../Shared/Sidebar/Sidebar';
 import './CreateCandidateProfile.css'
@@ -60,40 +60,42 @@ const CreateCandidateProfile = () => {
 
             e.preventDefault();
     }
-    const [profile, setProfile] = useState();
-    const [imageURL, setImageURL] = useState(null);
 
 
-    const handleInput = (e) => {
-        const profileData = { ...profile }
-        profileData[e.target.name] = e.target.value;
-        setProfile(profileData)
-    }
-
-    const handleImageInput = (e) => {
-
-    }
+    // const [profile, setProfile] = useState();
+    // const [imageURL, setImageURL] = useState(null);
 
 
-    const handleSubmit = (e) => {
-        console.log(profile);
+    // const handleInput = (e) => {
+    //     const profileData = { ...profile }
+    //     profileData[e.target.name] = e.target.value;
+    //     setProfile(profileData)
+    // }
 
-        fetch('https://aqueous-cove-89051.herokuapp.com/createCandidateProfile', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(profile)
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result) {
-                    alert('Profile Crated');
+    // const handleImageInput = (e) => {
 
-                }
-            })
-        e.preventDefault()
-    }
+    // }
+
+
+    // const handleSubmit = (e) => {
+    //     console.log(profile);
+
+    //     fetch('https://aqueous-cove-89051.herokuapp.com/createCandidateProfile', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(profile)
+    //     })
+    //         .then(res => res.json())
+    //         .then(result => {
+    //             if (result) {
+    //                 alert('Profile Crated');
+
+    //             }
+    //         })
+    //     e.preventDefault()
+    // }
 
     return (
         <div className="formField">
@@ -128,9 +130,9 @@ const CreateCandidateProfile = () => {
                         <input name="institution" className="institution" type="text" placeholder="Institution Name" required onBlur={handleBlur}/>
                         <br /><br />
                         <input name="passing" className="passingYear" type="text" placeholder="Passing Year" required onBlur={handleBlur}/>
-                                <input onChange={handleInput} className="name" type="text" name="name" placeholder="Your Name" id="" required />
+                                <input className="name" type="text" name="name" placeholder="Your Name" id="" required onBlur={handleBlur}/>
                         <br /><br />
-                                <input onChange={handleInput} className="email" type="email" placeholder="Your Email" name="email" id="" required />
+                                {/* <input onChange={handleInput} className="email" type="email" placeholder="Your Email" name="email" id="" required />
                         <br /><br />
                                 <input onChange={handleInput} className="number" type="number" name="phoneNumber" placeholder="Your Phone Number" id="" required />
                         <br /><br />
@@ -148,7 +150,7 @@ const CreateCandidateProfile = () => {
                         <br /><br />
                                 <input onChange={handleInput} className="institution" name="institution" type="text" placeholder="Institution Name" required />
                         <br /><br />
-                                <input onChange={handleInput} className="passingYear" name="passingYear" type="text" placeholder="Passing Year" required />
+                                <input onChange={handleInput} className="passingYear" name="passingYear" type="text" placeholder="Passing Year" required /> */}
                  </div>
 
                  <div className="col-md-4">
@@ -173,7 +175,7 @@ const CreateCandidateProfile = () => {
                      <input name="linkedIn" className="linkedIn" type="url" placeholder="Linked In" required onBlur={handleBlur}/>
                      <br /><br />
                      <input name="portfolio" className="portfolio" type="url" placeholder="Portfolio" required onBlur={handleBlur}/>
-                                <input onChange={handleInput} className="jobTitle" name="jobTitle" type="text" placeholder="Job Title" />
+                                {/* <input onChange={handleInput} className="jobTitle" name="jobTitle" type="text" placeholder="Job Title" />
                      <br /><br />
                                 <input onChange={handleInput} className="company" name="company" type="text" placeholder="Company" />
                      <br /><br />
@@ -184,15 +186,14 @@ const CreateCandidateProfile = () => {
                      <br /><br />
                      <h4><i class="fab fa-battle-net"></i> Skill Set:</h4>
                                 <input onChange={handleInput} className="skillName" name="skillSet" type="text" placeholder="Skill Name" required />
-                                {/* <br /><br /> */}
-                                {/* <input onChange={handleInput} className="experience" type="text" placeholder="Experience in Year" required /> */}
+                                
                      <br /> <br />
                      <h4><i class="fas fa-link"></i> Important Links:</h4>
                                 <input onChange={handleInput} className="github" name="github" type="url" placeholder="Github" required />
                      <br /><br />
                                 <input onChange={handleInput} className="linkedIn" name="linkedIn" type="url" placeholder="Linked In" required />
                      <br /><br />
-                                <input onChange={handleInput} className="portfolio" name="portfolio" type="url" placeholder="Portfolio" required />
+                                <input onChange={handleInput} className="portfolio" name="portfolio" type="url" placeholder="Portfolio" required /> */}
                  </div>
 
                  <div className="col-md-4">
@@ -217,7 +218,7 @@ const CreateCandidateProfile = () => {
                      <input name="link" className="projectField" type="url" placeholder="Live Link" required onBlur={handleBlur}/>
                      <br /><br />
                      <input name="repo" className="projectField" type="url" placeholder="Repository Link" required onBlur={handleBlur}/>
-                                <input onChange={handleInput} className="projectField" name='project1Title' type="text" placeholder="Project Name" required />
+                                {/* <input onChange={handleInput} className="projectField" name='project1Title' type="text" placeholder="Project Name" required />
                      <br /> <br />
                                 <input onChange={handleInput} className="projectField" name='project1Link' type="url" placeholder="Live Link" required />
                      <br /><br />
@@ -235,7 +236,7 @@ const CreateCandidateProfile = () => {
                      <br /> <br />
                                 <input onChange={handleInput} className="projectField" name='project3Link' type="url" placeholder="Live Link" />
                      <br /><br />
-                                <input onChange={handleInput} className="projectField" name='project3code' type="url" placeholder="Repository Link" />
+                                <input onChange={handleInput} className="projectField" name='project3code' type="url" placeholder="Repository Link" /> */}
                  </div>
                             <button onClick={handleSubmit} type="submit" className="btn btn-info">Submit</button>
                </div>
