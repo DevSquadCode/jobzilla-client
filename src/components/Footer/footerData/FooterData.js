@@ -12,6 +12,10 @@ export const navigationOne = [
         link: 'http://localhost:3000/'
     },
     {
+        title: 'Blogs',
+        link: 'http://localhost:3000/'
+    },
+    {
         title: 'Partners',
         link: 'http://localhost:3000/'
     },
@@ -19,13 +23,13 @@ export const navigationOne = [
 ]
 
 
-export const navigationTow = [
+export const aboutJobZilla = [
     {
         title: 'About Us',
         link: 'http://localhost:3000/'
     },
     {
-        title: 'Contact Us',
+        title: `We're hiring`,
         link: 'http://localhost:3000/'
     },
     {
@@ -33,14 +37,22 @@ export const navigationTow = [
         link: 'http://localhost:3000/'
     },
     {
+        title: 'Our Services',
+        link: 'http://localhost:3000/'
+    },
+    {
         title: 'Privacy Policy',
+        link: 'http://localhost:3000/'
+    },
+    {
+        title: 'Contact Us',
         link: 'http://localhost:3000/'
     },
 ]
 
 export const followUs = [
     {
-        title : 'Blog',
+        title : 'LinkedIn',
         link: 'http://localhost:3000/'
     },
     {
@@ -48,10 +60,18 @@ export const followUs = [
         link: 'http://localhost:3000/'
     },
     {
+        title: 'Github',
+        link: 'http://localhost:3000/'
+    },
+    {
         title: 'Facebook',
         link: 'http://localhost:3000/'
     },
     {
+        title: 'Instagram',
+        link: 'http://localhost:3000/'
+    },
+    { 
         title: 'Youtube',
         link: 'http://localhost:3000/'
     }
@@ -59,11 +79,19 @@ export const followUs = [
 
 export const popularJobs = [
     {
-        title: 'Web Developer',
+        title: 'ReactJs Developer',
         link: 'http://localhost:3000/'
     },
     {
-        title: 'Web Design',
+        title: 'Data Analyst',
+        link: 'http://localhost:3000/'
+    },
+    {
+        title: 'Software Engineer',
+        link: 'http://localhost:3000/'
+    },
+    {
+        title: 'Python Developer',
         link: 'http://localhost:3000/'
     },
     {

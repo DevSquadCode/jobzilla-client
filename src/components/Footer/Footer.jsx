@@ -1,51 +1,54 @@
 import React from 'react';
-import footerStyle from './footer.module.css'
-import logo from '../../images/Job-Exchange-Logo.png';
-import { 
+import {
+    aboutJobZilla,
     followUs,
-    navigationOne, 
-    navigationTow, 
-    popularJobs 
+    navigationOne,
+    popularJobs
 } from './footerData/FooterData';
 
 
 const Footer = () => {
     return (
-        <footer className='bg-secondary py-5'>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4">
-                        <img className='img-fluid' src={logo} alt="" />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias obcaecati sint vero cum adipisci eos officia nihil assumenda rem.</p>
+        <footer className='pt-5 pb-1' style={{ background: '#FFF0F5' }}>
+            <div className="container py-4">
+                <div className="row text-center text-md-start">
+                    <div className="col-md-3">
+                        <h3>JobZilla</h3>
+                        <p className='text-secondary pe-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias obcaecati sint vero cum adipisci eos officia nihil assumenda rem.</p>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-9">
                         <div className="row">
-                            <div className="col-md-3">
-                                <h4>Navigation</h4>
+                            <div className="col-md-3 py-2">
+                                <h5>Navigation</h5>
                                 {
-                                    navigationOne.map((link, i) => <li key={i++} className='list-unstyled'>{link.title}</li>)
+                                    navigationOne.map((link, i) => <a href={link.link} key={i++} className='text-decoration-none d-block text-secondary'>{link.title}</a>)
                                 }
                             </div>
-                            <div className="col-md-3">
+
+                            <div className="col-md-3 py-2">
+                                <h5>Follow Us</h5>
                                 {
-                                    navigationTow.map((link, i) => <li key={i++} className='list-unstyled'>{link.title}</li>)
+                                    followUs.map((link, i) => <a href={link.link} key={i++} className='text-decoration-none d-block text-secondary'>{link.title}</a>)
                                 }
                             </div>
-                            <div className="col-md-3">
-                                <h4>Follow Us</h4>
+                            <div className="col-md-3 py-2">
+                                <h5>Popular Jobs</h5>
                                 {
-                                    followUs.map((link, i) => <li key={i++} className='list-unstyled'>{link.title}</li>)
+                                    popularJobs.map((job, i) => <a href={job.link} key={i++} className='text-decoration-none d-block text-secondary'>{job.title}</a>)
                                 }
                             </div>
-                            <div className="col-md-3">
-                                <h4>Popular Jobs</h4>
+                            <div className="col-md-3 py-2">
+                                <h5>About JobZilla</h5>
                                 {
-                                    popularJobs.map((job, i) => <li key={i++} className='list-unstyled'>{job.title}</li>)
+                                    aboutJobZilla.map((link, i) => <a href={link.link} key={i++} className='text-decoration-none d-block text-secondary'>{link.title}</a>)
                                 }
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <p className='text-center text-secondary'>&#169; Copyright {new Date().getFullYear()} JobZilla</p>
             </div>
         </footer>
     );
