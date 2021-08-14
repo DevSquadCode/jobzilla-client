@@ -12,7 +12,7 @@ const SingleBlog = () => {
 
     useEffect(() => {
       const fetchSingleBlog = async () =>{
-          const res = await axios.get(`http://localhost:8080/singleBlog/${id}`)
+          const res = await axios.get(`https://aqueous-cove-89051.herokuapp.com/singleBlog/${id}`)
           setSingleBlog(res.data)
       }
       fetchSingleBlog();
