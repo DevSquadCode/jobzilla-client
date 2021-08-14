@@ -1,44 +1,85 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import Sidebar from '../../Shared/Sidebar/Sidebar';
-import './CreateCandidateProfile.css'
+import './CreateCandidateProfile.css';
+import axios from 'axios';
+
 
 const CreateCandidateProfile = () => {
 
-    const [profile, setProfile] = useState();
+    const [profile, setProfile] = useState({});
     const [imageURL, setImageURL] = useState(null);
 
 
-    const handleInput = (e) => {
-        const profileData = { ...profile }
-        profileData[e.target.name] = e.target.value;
-        setProfile(profileData)
+    const handleBlur = e => {
+        const candidateData = {...profile};
+        candidateData[e.target.name] = e.target.value;
+        setProfile(candidateData);
+        console.log(candidateData);
     }
 
-    const handleImageInput = (e) => {
-
+    const handleImageUpload = event => {
+        console.log(event.target.files[0]);
+      const imageData = new FormData();
+      imageData.set('key', 'b86c0ab7beeb42c384775d3b62a113c0');
+      imageData.append('image', event.target.files[0])
+  
+      axios.post('https://api.imgbb.com/1/upload', imageData)
+        .then(function (response) {
+          setImageURL(response.data.data.display_url);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+  
     }
 
 
-    const handleSubmit = (e) => {
-        console.log(profile);
+    const handleSubmit = e => {
 
-        fetch('https://aqueous-cove-89051.herokuapp.com/createCandidateProfile', {
+        const formData = {
+            name: profile.name,
+            email: profile.email,
+            phone: profile.phone,
+            imageURL: imageURL,
+            presentAdd: profile.presentAdd,
+            permanentAdd: profile.permanentAdd,
+            education: profile.education,
+            degree: profile.degree,
+            institution: profile.institution,
+            passing: profile.passing,
+            job: profile.job,
+            company: profile.company,
+            startDate: profile.startDate,
+            endDate: profile.endDate,
+            skill: profile.skill,
+            experience: profile.experience,
+            github: profile.github,
+            linkedIn: profile.linkedIn,
+            portfolio: profile.portfolio,
+            project: profile.project,
+            link: profile.link,
+            repo: profile.repo,
+        }
+
+        fetch('https://aqueous-cove-89051.herokuapp.com/addCandidateProfile', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(profile)
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(formData)
         })
             .then(res => res.json())
-            .then(result => {
-                if (result) {
-                    alert('Profile Crated');
-
+            .then(data => {
+                console.log(data);
+                if (!data) {
+                    alert("Profile Created Successfully!")
                 }
             })
-        e.preventDefault()
+            .catch(error => {
+                console.error(error)
+            })
+
+            e.preventDefault();
     }
+
 
     return (
         <div className="formField">
@@ -48,79 +89,80 @@ const CreateCandidateProfile = () => {
            </div>
 
            <div className="col-md-10">
-           <form action="">
+           <form onSubmit={handleSubmit}>
                <div className="row m-3 d-flex align-items-center">
                  <div className="col-md-4">
                         <h3><i class="fas fa-info-circle"></i> Basic Information:</h3>
-                                <input onChange={handleInput} className="name" type="text" name="name" placeholder="Your Name" id="" required />
+                        <input name="name" className="name" type="text"  placeholder="Your Name" id="" required onBlur={handleBlur} />
                         <br /><br />
-                                <input onChange={handleInput} className="email" type="email" placeholder="Your Email" name="email" id="" required />
+                        <input name="email" className="email" type="email" placeholder="Your Email"  id="" required onBlur={handleBlur}/>
                         <br /><br />
-                                <input onChange={handleInput} className="number" type="number" name="phoneNumber" placeholder="Your Phone Number" id="" required />
+                        <input name="phone" className="number" type="number"  placeholder="Your Phone Number" id="" required onBlur={handleBlur} />
                         <br /><br />
                         <h5>Upload Your Photo:</h5>
-                                <input onChange={handleImageInput} className="file" type="file" required />
+                        <input name="file" className="file" type="file" required onChange={handleImageUpload}/>
                         <br /><br />
-                                <input onChange={handleInput} className="presentAddress" name="presentAddress" type="text" placeholder="Present Address" required />
+                        <input name="presentAdd" className="presentAddress" type="text" placeholder="Present Address" required onBlur={handleBlur}/>
                         <br /><br />
-                                <input onChange={handleInput} className="permanentAddress" name="permanentAddress" type="text" placeholder="Permanent Address" required />
+                        <input name="permanentAdd" className="permanentAddress" type="text" placeholder="Permanent Address" required onBlur={handleBlur}/>
                         <br /><br />
                         <h4><i class="fas fa-school"></i> Education:</h4>
-                                <input onChange={handleInput} className="educationLevel" name="educationLevel" type="text" placeholder="Education Level" required />
+                        <input name="education" className="educationLevel" type="text" placeholder="Education Level" required onBlur={handleBlur}/>
                         <br /><br />
-                                <input onChange={handleInput} className="degree" name="degree" type="text" placeholder="Degree Title" required />
+                        <input name="degree" className="degree" type="text" placeholder="Degree Title" required onBlur={handleBlur}/>
                         <br /><br />
-                                <input onChange={handleInput} className="institution" name="institution" type="text" placeholder="Institution Name" required />
+                        <input name="institution" className="institution" type="text" placeholder="Institution Name" required onBlur={handleBlur}/>
                         <br /><br />
-                                <input onChange={handleInput} className="passingYear" name="passingYear" type="text" placeholder="Passing Year" required />
+                        <input name="passing" className="passingYear" type="text" placeholder="Passing Year" required onBlur={handleBlur}/>
+                        <br /><br />
                  </div>
 
                  <div className="col-md-4">
                      <h4><i class="fas fa-user-md"></i> Job Experience:</h4>
-                                <input onChange={handleInput} className="jobTitle" name="jobTitle" type="text" placeholder="Job Title" />
+                     <input name="job" className="jobTitle" type="text" placeholder="Job Title" onBlur={handleBlur}/>
                      <br /><br />
-                                <input onChange={handleInput} className="company" name="company" type="text" placeholder="Company" />
+                     <input name="company" className="company" type="text" placeholder="Company" onBlur={handleBlur}/>
                      <br /><br />
                      <h6>Start Date:</h6>
-                                <input onChange={handleInput} className="startDate" name="startDate" type="date" />
+                     <input name="startDate" className="startDate" type="date" onBlur={handleBlur}/>
                      <h6 className="mt-2">End Date:</h6>
-                                <input onChange={handleInput} className="endDate" name="endDate" type="date" />
+                     <input name="endDate" className="endDate" type="date" onBlur={handleBlur}/>
                      <br /><br />
                      <h4><i class="fab fa-battle-net"></i> Skill Set:</h4>
-                                <input onChange={handleInput} className="skillName" name="skillSet" type="text" placeholder="Skill Name" required />
-                                {/* <br /><br /> */}
-                                {/* <input onChange={handleInput} className="experience" type="text" placeholder="Experience in Year" required /> */}
+                     <input name="skill" className="skillName" type="text" placeholder="Skill Name" required onBlur={handleBlur}/>
+                     <br /><br />
+                     <input name="experience" className="experience" type="text" placeholder="Experience in Year" required onBlur={handleBlur}/>
                      <br /> <br />
                      <h4><i class="fas fa-link"></i> Important Links:</h4>
-                                <input onChange={handleInput} className="github" name="github" type="url" placeholder="Github" required />
+                     <input name="github" className="github" type="url" placeholder="Github" required onBlur={handleBlur} />
                      <br /><br />
-                                <input onChange={handleInput} className="linkedIn" name="linkedIn" type="url" placeholder="Linked In" required />
+                     <input name="linkedIn" className="linkedIn" type="url" placeholder="Linked In" required onBlur={handleBlur}/>
                      <br /><br />
-                                <input onChange={handleInput} className="portfolio" name="portfolio" type="url" placeholder="Portfolio" required />
+                     <input name="portfolio" className="portfolio" type="url" placeholder="Portfolio" required onBlur={handleBlur}/>
                  </div>
 
                  <div className="col-md-4">
                      <h4><i class="fas fa-tasks"></i> Projects:</h4>
                      <h5>Project-1:</h5>
-                                <input onChange={handleInput} className="projectField" name='project1Title' type="text" placeholder="Project Name" required />
+                     <input name="project" className="projectField" type="text" placeholder="Project Name" required onBlur={handleBlur}/>
                      <br /> <br />
-                                <input onChange={handleInput} className="projectField" name='project1Link' type="url" placeholder="Live Link" required />
+                     <input name="link" className="projectField" type="url" placeholder="Live Link" required onBlur={handleBlur}/>
                      <br /><br />
-                                <input onChange={handleInput} className="projectField" name='project1Code' type="url" placeholder="Repository Link" required />
+                     <input name="repo" className="projectField" type="url" placeholder="Repository Link" required onBlur={handleBlur}/>
                      <br /><br />
                      <h5>Project-2:</h5>
-                                <input onChange={handleInput} className="projectField" name='project2Title' type="text" placeholder="Project Name" />
+                     <input name="project" className="projectField" type="text" placeholder="Project Name" required onBlur={handleBlur}/>
                      <br /> <br />
-                                <input onChange={handleInput} className="projectField" name='project2Link' type="url" placeholder="Live Link" />
+                     <input name="link" className="projectField" type="url" placeholder="Live Link" required onBlur={handleBlur}/>
                      <br /><br />
-                                <input onChange={handleInput} className="projectField" name='project2Code' type="url" placeholder="Repository Link" />
+                     <input className="projectField" type="url" placeholder="Repository Link" required onBlur={handleBlur}/>
                      <br /><br />
                      <h5>Project-3:</h5>
-                                <input onChange={handleInput} className="projectField" name='project3Title' type="text" placeholder="Project Name" />
+                     <input name="project" className="projectField" type="text" placeholder="Project Name" required onBlur={handleBlur}/>
                      <br /> <br />
-                                <input onChange={handleInput} className="projectField" name='project3Link' type="url" placeholder="Live Link" />
+                     <input name="link" className="projectField" type="url" placeholder="Live Link" required onBlur={handleBlur}/>
                      <br /><br />
-                                <input onChange={handleInput} className="projectField" name='project3code' type="url" placeholder="Repository Link" />
+                     <input name="repo" className="projectField" type="url" placeholder="Repository Link" required onBlur={handleBlur}/>
                  </div>
                             <button onClick={handleSubmit} type="submit" className="btn btn-info">Submit</button>
                </div>
