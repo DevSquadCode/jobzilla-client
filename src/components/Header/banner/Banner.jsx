@@ -3,25 +3,54 @@ import bannerImg from '../../../images/banner.png';
 
 
 const Banner = () => {
+    const [inputValue, setInputValue] = React.useState();
+
+
+
+    const handleInputChange = e => {
+        const value = e.target.value;
+        const name = e.target.name;
+
+        const newValue = {...inputValue};
+        newValue[name] = value;
+        setInputValue(newValue)
+
+    }
+    console.log(inputValue)
+
+    const handleSearch = e => {
+        e.preventDefault();
+
+        if(inputValue?.jobTitle || inputValue?.jobLocation){
+
+            
+            alert('shotto hoice')
+        }else{
+            alert('Please Select a Criteria Before Search !')
+        }
+
+    }
+
+
     return (
         <section className='py-4'>
             <div className="container mt-5 py-5">
                 <div className="row py-3">
                     <div className="col-md-4 py-2">
-                        <input className='form-control' type="search" placeholder='Search Job' />
+                        <input onChange={handleInputChange} name='jobTitle' className='form-control' type="search" placeholder='Search Job' />
                     </div>
                     <div className="col-md-4 py-2">
-                        <input className='form-control' type="search" placeholder='Job Location' />
+                        <input onChange={handleInputChange} name='jobLocation' className='form-control' type="search" placeholder='Job Location' />
                     </div>
                     <div className="col-md-4 py-2">
                         <div className="input-group">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Select Category</option>
+                            <select className="form-select" aria-label="Default select example">
+                                <option value='Select Category'>Select Category</option>
                                 <option value="1">Remote</option>
                                 <option value="2">Full Time</option>
                                 <option value="3">Part Time</option>
                             </select>
-                            <button className="btn-brand">Search</button>
+                            <button onClick={handleSearch} className="btn-brand">Search</button>
                         </div>
                     </div>
                 </div>
