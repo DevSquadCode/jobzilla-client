@@ -34,7 +34,7 @@ const CreateBlogs = () => {
             {
               blogs.map(blog => (
                <Col md={4} sm={6} xs={12} >
-                 <Link to="/singleBlog">
+                 <Link to={`/singleBlog/${blog._id}`}>
                <Card  className="shadow mb-5 p-4" >
                  {/* <Card.Header>Header</Card.Header> */}
                  <img src={blogImage} alt="Girl in a jacket"></img>
@@ -44,7 +44,6 @@ const CreateBlogs = () => {
                      {blog.description}
                    </Card.Text>
                  </Card.Body>
-                 {new Date().getFullYear()}
                </Card>
                </Link>
              </Col>

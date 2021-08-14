@@ -59,10 +59,10 @@ function App() {
           <AddBlogs/>
           </PrivateRoute>
         
-        <PrivateRoute path='/singleBlog'>
+        <Route path='/singleBlog/:id'>
           <SingleBlog/>
         
-          </PrivateRoute>
+        </Route>
           
         <Route exact path='/'>
           <Home />
