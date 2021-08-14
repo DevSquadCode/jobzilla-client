@@ -10,7 +10,7 @@ const AddJob = () => {
         const newData = {...jobData};
         newData[e.target.name] = e.target.value;
         setJobData(newData);
-        // console.log(newData);
+        console.log(newData);
     }
 
     
@@ -19,6 +19,7 @@ const AddJob = () => {
         const formData = {
             name: jobData.name,
             title: jobData.title,
+            location: jobData.location,
             jobType: jobData.jobType,
             description: jobData.description,
             skills: jobData.skills,
@@ -62,6 +63,9 @@ const AddJob = () => {
                 <br /><br />
                 <h4>Job Title</h4>
                 <input name="title" type="text" onBlur={handleBlur}/>
+                <br /><br />
+                <h4>Job Location</h4>
+                <input name="location" type="text" onBlur={handleBlur}/>
                 <br /><br />
                 <h4>Job Type</h4>
                 <select name="jobType" type="text" onBlur={handleBlur}>
