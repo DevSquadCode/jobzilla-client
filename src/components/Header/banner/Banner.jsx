@@ -1,10 +1,16 @@
 import React from 'react';
 import bannerImg from '../../../images/banner.png';
+import CustomModal from '../../Shared/Modal/CustomModal';
+
 
 
 const Banner = () => {
     const [inputValue, setInputValue] = React.useState();
+    const [modalShow, setModalShow] = React.useState(false);
 
+    const handleShowModal= () => {
+      setModalShow(true);
+    }
 
 
     const handleInputChange = e => {
@@ -19,16 +25,12 @@ const Banner = () => {
     console.log(inputValue)
 
     const handleSearch = e => {
-        e.preventDefault();
-
-        if(inputValue?.jobTitle || inputValue?.jobLocation){
-
-            
-            alert('shotto hoice')
+        e.preventDefault(); 
+        if(inputValue?.jobPosition || inputValue?.jobLocation){
+            handleShowModal()
         }else{
             alert('Please Select a Criteria Before Search !')
         }
-
     }
 
 
@@ -37,7 +39,7 @@ const Banner = () => {
             <div className="container mt-5 py-5">
                 <div className="row py-3">
                     <div className="col-md-4 py-2">
-                        <input onChange={handleInputChange} name='jobTitle' className='form-control' type="search" placeholder='Search Job' />
+                        <input onChange={handleInputChange} name='jobPosition' className='form-control' type="search" placeholder='Job Position' />
                     </div>
                     <div className="col-md-4 py-2">
                         <input onChange={handleInputChange} name='jobLocation' className='form-control' type="search" placeholder='Job Location' />
@@ -51,6 +53,7 @@ const Banner = () => {
                                 <option value="3">Part Time</option>
                             </select>
                             <button onClick={handleSearch} className="btn-brand">Search</button>
+                            <CustomModal setShow={setModalShow} show={modalShow} inputValue={inputValue}/>
                         </div>
                     </div>
                 </div>
