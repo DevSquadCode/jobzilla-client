@@ -3,7 +3,7 @@ import React from 'react';
 const Category = (props) => {
 
     const {title, vacancy, logo} = props.categoryData;
-    console.log(props.categoryData)
+    // console.log(props.categoryData)
     return (
            <div className="col-md-3">
              <div class="card box-shadow">
