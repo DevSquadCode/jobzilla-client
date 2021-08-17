@@ -19,19 +19,14 @@ const Header = () => {
               <a id='menu' className="nav-link" href="#">JOBS</a>
             </li>
             <li className="nav-item">
-              <a id='menu' className="nav-link" href="#">CANDIDATES</a>
-            </li>
-            <li className="nav-item">
               <a id='menu' className="nav-link" href="#">ABOUT US</a>
             </li>
-            <li className="nav-item">
-              <a id='menu' className="nav-link" href="#">REGISTER</a>
-            </li>
+
             <li className="nav-item">
               <Link id='menu' className="nav-link" to='/blogs'> BLOG</Link>
             </li>
             <li className="nav-item">
-              <Link id='menu' className="nav-link" to='/showCandidateProfile'> DASHBOARD</Link>
+              <Link id='menu' className="nav-link" to='/addReview'> DASHBOARD</Link>
             </li>
             <li className="nav-item">
               <Link id='logMenu' className="nav-link" to='/login'>LOG IN</Link>

@@ -3,7 +3,7 @@ import React from 'react';
 const SingleJob = (props) => {
 
     const {name, title, jobType, deadline} = props.singleJob;
-    console.log(props.singleJob)
+    // console.log(props.singleJob)
     return (
         <div class="cardList">
               <div class="cardList-body">
