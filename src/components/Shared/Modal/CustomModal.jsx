@@ -4,7 +4,7 @@ import { Modal } from 'react-bootstrap';
 
 
 
-const CustomModal = ({setShow, show, inputValue}) => {
+const CustomModal = ({setShow, show}) => {
     
     return (
       <>
@@ -14,7 +14,7 @@ const CustomModal = ({setShow, show, inputValue}) => {
           </Modal.Header>
           <Modal.Body>
                 <h5>Your Available Jobs <span className="text-success">
-                    {inputValue?.jobPosition && `on position ${inputValue?.jobPosition}`} {inputValue?.jobLocation && `in ${inputValue?.jobLocation}`}  
+                    {/* {inputValue?.jobPosition && `on position ${inputValue?.jobPosition}`} {inputValue?.jobLocation && `in ${inputValue?.jobLocation}`}   */}
                   </span>
                 </h5>
           </Modal.Body>
