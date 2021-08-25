@@ -11,7 +11,7 @@ import firebaseConfig from "./firebase.config";
 import { useHistory, useLocation } from "react-router-dom";
 import { UserContext } from "../../../App";
 import { useContext } from "react";
-
+import {setJWTToken} from '../AuthManager'
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -26,6 +26,7 @@ const Login = () => {
 } else {
     firebase.app();
 }
+
   const handleInput = (e) =>{
     e.preventDefault()
     const info = {...signInInfo}
@@ -38,9 +39,11 @@ const Login = () => {
    firebase.auth().signInWithEmailAndPassword(signInInfo.email, signInInfo.password)
   .then((userCredential) => {
     // Signed in
+    console.log(userCredential)
     var user = userCredential.user;
     setLoggedInUser({"email":user.email})
     history.push(from);
+    setJWTToken()
 
     // ...
   })

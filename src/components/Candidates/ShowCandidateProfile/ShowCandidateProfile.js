@@ -2,7 +2,7 @@ import React from 'react';
 import { Badge } from 'react-bootstrap';
 import Sidebar from '../../Shared/Sidebar/Sidebar'
 
-const ShowCandidateProfile = () => {
+const ShowCandidateProfile = (props) => {
     return (
         <div className="row">
             <div className="col-md-2">

@@ -18,10 +18,11 @@ import AddBlogs from './components/Blogs/AddBlogs.js';
 import SingleBlog from './components/Blogs/SingleBlog.js';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.js';
+import { getDecodedUser } from './pages/authentication/AuthManager'
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState(getDecodedUser());
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
