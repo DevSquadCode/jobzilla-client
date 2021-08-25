@@ -9,11 +9,11 @@ import {
 
 const Footer = () => {
     return (
-        <footer className='pt-5 pb-1' style={{ background: '#FFF0F5' }}>
+        <footer className='pt-5 pb-1' style={{background: 'rgb(238, 240, 245)'}}>
             <div className="container py-4">
                 <div className="row text-center text-md-start">
                     <div className="col-md-3">
-                        <h3>JobZilla</h3>
+                        <h3 className='text-brand'>Job<span className='text-secondary'>Zilla</span></h3>
                         <p className='text-secondary pe-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias obcaecati sint vero cum adipisci eos officia nihil assumenda rem.</p>
                     </div>
                     <div className="col-md-9">

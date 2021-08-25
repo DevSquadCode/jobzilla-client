@@ -24,25 +24,32 @@ export default class AutoPlay extends Component {
     render() {
         const settings = {
             dots: true,
-            infinite: true,
+            // infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
-            autoplay: true,
-            speed: 5000,
-            autoplaySpeed: 500,
+            // autoplay: true,
+            // speed: 3000,
+            // autoplaySpeed: 500,
             cssEase: "linear",
             centerMode: true,
             responsive: [
                 {
-                    breakpoint: 678,
+                    breakpoint: 768,
                     settings: {
                         dots: true,
-                        infinite: true,
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        autoplay: true,
-                        speed: 5000,
-                        autoplaySpeed: 500,
+                        cssEase: "linear",
+                        centerMode: true,
+                    }
+
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
                         cssEase: "linear",
                         centerMode: true,
                     }
@@ -52,8 +59,8 @@ export default class AutoPlay extends Component {
         };
 
         return (
-            <div className={styles.testimonialContainer}>
-                <h2 className='text-center m-4'>Testimonial</h2>
+            <div className='container pt-5 pb-5'>
+                <h3 className='text-center text-uppercase text-brand py-3'>Testimonials</h3>
                 <Slider {...settings}>
                     {
                         this.state.testimonialData.map(data => <ReviewCard data={data} ></ReviewCard>)

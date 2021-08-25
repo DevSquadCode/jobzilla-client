@@ -2,23 +2,17 @@
 
 #menu{
     /* color: #CDCDCD; */
-    color: #232763;
+    /* color: #8B2323; */
     margin-right: 10px;
     font-size: 18px;
     transition: all 0.5s ease;
     font-weight: 700;
-
+    
 }
 
 #menu:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgb(34, 219, 34);
-}
-
-#logMenu{
-    font-size: 18px;
-    transition: all 0.5s ease;
-    font-weight: 700;
-    color: white;
-    background-color: rgb(25, 206, 25);
-}
+    color: #8B2323;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px lightgray;
+    transform: translateX(-5px);
+};

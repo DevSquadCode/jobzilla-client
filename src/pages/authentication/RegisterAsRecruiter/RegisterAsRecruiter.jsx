@@ -113,17 +113,17 @@ const RegisterAsRecruiter = () => {
             <div className="container d-flex justify-content-center align-items-center py-5" style={{ minHeight: '100vh' }}>
                 <div className="row">
                     <div className="col-md-7 shadow-sm rounded-3 border p-4 d-flex flex-column justify-center align-items-center">
-                        <h3>Create Your Account</h3>
+                        <h3 className='text-brand'>Create Your Account</h3>
                         <div className="p-2 w-75">
                             <label htmlFor="email">Official Email Id</label>
-                            <input type="text" onChange={handleInputValidation} className="form-control py-2" name='email' id='email' placeholder='Name@Company_Name.com' />
+                            <input type="text" onChange={handleInputValidation} className="custom-input d-block w-100 px-3 py-2 rounded" name='email' id='email' placeholder='Name@Company_Name.com' />
                             {
                                 inputError?.name === 'email' && <p className='text-danger text-center'>{inputError?.errorMessage}</p> 
                             }
                         </div>
                         <div className="p-2 w-75">
                             <label htmlFor="password">Password</label>
-                            <input type="password" onChange={handleInputValidation} className="form-control py-2" name='password' id='password' placeholder="Enter Your Secret Code" />
+                            <input type="password" onChange={handleInputValidation} className="custom-input d-block w-100 px-3 py-2 rounded" name='password' id='password' placeholder="Enter Your Secret Code" />
                             {
                                 inputError?.name === 'password' && <p className='text-danger text-center'>{inputError?.errorMessage}</p>
                             }
@@ -132,11 +132,11 @@ const RegisterAsRecruiter = () => {
                             <div className="row">
                                 <div className="col-6">
                                     <label htmlFor="firstName">First Name</label>
-                                    <input type="text" className='form-control py-2' id='firstName' placeholder='Patrick'/>
+                                    <input type="text" className='custom-input d-block w-100 px-3 py-2 rounded' id='firstName' placeholder='Patrick'/>
                                 </div>
                                 <div className="col-6">
                                     <label htmlFor="lastName">Last Name</label>
-                                    <input type="text" className='form-control py-2' id='lastName' placeholder='Williams'/>
+                                    <input type="text" className='custom-input d-block w-100 px-3 py-2 rounded' id='lastName' placeholder='Williams'/>
                                 </div>
                             </div>
                         </div>
@@ -144,29 +144,29 @@ const RegisterAsRecruiter = () => {
                             <label htmlFor="mobile">Mobile Number</label>
                             <div className="row">
                                 <div className="col-3">
-                                    <input type="text" className='form-control py-2' value='+88' name='country_code'/>
+                                    <input type="text" className='custom-input d-block w-100 px-3 py-2 rounded' value='+88' name='country_code'/>
                                 </div>
                                 <div className="col-9">
-                                    <input onChange={handleInputValidation} className='form-control py-2' type="number" name="number" id="mobile" placeholder='11 Digit Mobile Number' />
+                                    <input onChange={handleInputValidation} className='custom-input d-block w-100 px-3 py-2 rounded' type="number" name="number" id="mobile" placeholder='11 Digit Mobile Number' />
                                     {
                                         inputError?.name === 'number' && <p className='text-danger text-center'>{inputError?.errorMessage}</p>
                                     }
                                 </div>
                             </div>
                         </div>
-                        <p className="p-2">By registering, you agree to our <span><a href="/">Terms & Conditions.</a></span></p>
-                        <button onClick={handleRegister} className="btn btn-outline-info w-50">Register Now</button>
+                        <p className="p-2">By registering, you agree to our <Link to="/" className='text-decoration-none'>Terms & Conditions.</Link></p>
+                        <button onClick={handleRegister} className="btn-brand-outline w-50">Register Now</button>
                         <div className="w-75 text-center py-3">
                             <p>
                                 Have an Account ? Please <Link to="/login">
-                                    <button className='btn btn-info rounded'>
+                                    <button className='btn border'>
                                         Login                                        
                                     </button>
                                 </Link>                
                             </p>
                         </div>
                     </div>
-                    <div className="col-md-5 d-flex justify-content-center align-items-center">
+                    <div className="col-md-5 d-flex justify-content-center align-items-center py-5">
                         <img className='img-fluid' src={registerBanner} alt="" />
                     </div>
                 </div>
