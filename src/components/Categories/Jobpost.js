@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Jobpost.css';
-import SingleJob from './SingleJob';
 import { useEffect } from 'react';
+import SingleJobList from '../Shared/SingleJobList/SingleJobList';
 
 const Jobpost = () => {
 
@@ -13,14 +13,14 @@ const Jobpost = () => {
         .then(data => setJob(data)) 
 }, [])
     return (
-        <div className='container mt-5'>
-          <h1 className="text-center">Job Listing</h1>
+        <div className='container mt-5 pt-4'>
+          <h3 className="text-center text-uppercase text-brand">Popular Jobs</h3>
           <br />
             <div className='row'>
 
             <div className="col-md-12">
              {
-               job.map(singleJob => <SingleJob singleJob={singleJob} key={singleJob._id}></SingleJob>)
+               job.map(singleJob => <SingleJobList data={singleJob} key={singleJob._id}></SingleJobList>)
              }
             </div>
 

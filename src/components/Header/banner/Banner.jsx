@@ -68,7 +68,7 @@ const Banner = () => {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(inputText)
-        }).then(res => res.json()).then(data => setSearchData(data)).catch(err => setSearchError(err));
+        }).then(res => res.json()).then(data => setSearchData(data)).catch(err => alert(err));
     };
 
     console.log(inputText)
@@ -119,16 +119,16 @@ const Banner = () => {
             {/* {searchError && alert(searchError.message)} */}
                 <div className="row py-3">
                     <div className="col-md-4 py-2 position-relative">
-                        <input onChange={handleInputChange} value={suggestText?.value?.position} name='jobPosition' className='form-control' type="search" placeholder='Job Position' />
+                        <input onChange={handleInputChange} value={suggestText?.value?.position} name='jobPosition' className='w-100 rounded py-2 px-3 custom-input' type="search" placeholder='Job Position'/>
                         {suggestText && getPositionSuggest()}
                     </div>
                     <div className="col-md-4 py-2">
-                        <input onChange={handleInputChange} value={suggestText?.value?.location} name='jobLocation' className='form-control' type="search" placeholder='Job Location' />
+                        <input onChange={handleInputChange} value={suggestText?.value?.location} name='jobLocation' className='w-100 rounded py-2 px-3 custom-input' type="search" placeholder='Job Location' />
                         {suggestText && getLocationSuggest()}
                     </div>
                     <div className="col-md-4 py-2">
-                        <div className="input-group">
-                            <select className="form-select" aria-label="Default select example">
+                        <div className="d-flex">
+                            <select className="w-100 rounded py-2 px-3 custom-input" aria-label="Default select example">
                                 <option value='Select Category'>Select Category</option>
                                 <option value="1">Remote</option>
                                 <option value="2">Full Time</option>
@@ -142,7 +142,7 @@ const Banner = () => {
                 <div className="row flex-column flex-column-reverse flex-md-row text-center text-md-start">
                     <div className="col-md-6 d-flex justify-content-center align-items-center">
                         <div>
-                            <h1 className='py-2 brand-text-color'>Find your Dream Job Here </h1>
+                            <h1 className='py-2 text-brand'>Find your Dream Job Here </h1>
                             <p className='text-secondary pb-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non temporibus fuga, nemo accusantium praesentium vel id quos quod voluptas distinctio!</p>
                             <div className="row">
                                 <div className='col-6 col-md-4'>
