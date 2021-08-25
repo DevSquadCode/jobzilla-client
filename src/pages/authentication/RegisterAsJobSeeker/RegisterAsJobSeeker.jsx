@@ -110,13 +110,13 @@ const RegisterAsJobSeeker = () => {
       >
         <div className="row">
           <div className="col-md-7 shadow-sm rounded-3 border p-4 d-flex flex-column justify-center align-items-center">
-            <h3>Create Your Account</h3>
+            <h3 className='text-brand'>Create Your Account</h3>
             <div className="p-2 w-75">
               <label htmlFor="email">Email</label>
               <input
                 type="text"
                 onChange={handleInputValidation}
-                className="form-control py-2"
+                className="custom-input d-block w-100 px-3 py-2 rounded"
                 id="email"
                 placeholder="Name@example.com"
               />
@@ -131,7 +131,7 @@ const RegisterAsJobSeeker = () => {
               <input
                 type="password"
                 onChange={handleInputValidation}
-                className="form-control py-2"
+                className="custom-input d-block w-100 px-3 py-2 rounded"
                 id="password"
                 placeholder="Enter Your Secret Code"
               />
@@ -147,7 +147,7 @@ const RegisterAsJobSeeker = () => {
                   <label htmlFor="firstName">First Name</label>
                   <input
                     type="text"
-                    className="form-control py-2"
+                    className="custom-input d-block w-100 px-3 py-2 rounded"
                     id="firstName"
                     placeholder="John"
                   />
@@ -156,7 +156,7 @@ const RegisterAsJobSeeker = () => {
                   <label htmlFor="lastName">Last Name</label>
                   <input
                     type="text"
-                    className="form-control py-2"
+                    className="custom-input d-block w-100 px-3 py-2 rounded"
                     id="lastName"
                     placeholder="Doe"
                   />
@@ -166,12 +166,12 @@ const RegisterAsJobSeeker = () => {
             <p className="p-2">
               By registering, you agree to our{" "}
               <span>
-                <a href="/">Terms & Conditions.</a>
+                <Link to="/" className='text-decoration-none'>Terms & Conditions.</Link>
               </span>
             </p>
             <button
               onClick={handleRegister}
-              className="btn btn-outline-info w-50"
+              className="btn-brand-outline w-50"
             >
               Register Now
             </button>
@@ -179,12 +179,12 @@ const RegisterAsJobSeeker = () => {
               <p>
                 Have an Account ? Please{" "}
                 <Link to="/login">
-                  <button className="btn text-info border">Login</button>
+                  <button className="btn border">Login</button>
                 </Link>
               </p>
             </div>
           </div>
-          <div className="col-md-5 d-flex justify-content-center align-items-center">
+          <div className="col-md-5 d-flex justify-content-center align-items-center py-5">
             <img className="img-fluid" src={registerBanner} alt="" />
           </div>
         </div>

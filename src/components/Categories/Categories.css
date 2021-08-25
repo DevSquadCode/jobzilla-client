@@ -3,11 +3,13 @@
     margin-bottom: 50px;
     cursor: pointer;
 }
+.custom-card{
+    transition: all 0.5s ease;
+}
 
-.card{
-   box-shadow: 5px 5px 10px lightgray;
-   margin-bottom: 10px;
-   min-height: 190px;
+.custom-card:hover{
+   box-shadow: 2px 2px 8px lightgray;
+   /* border: none; */
 }
 
 
