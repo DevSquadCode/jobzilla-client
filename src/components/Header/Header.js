@@ -32,28 +32,28 @@ const Header = () => {
                 aria-current="page"
                 to="/home"
               >
-                HOME
+                Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link id="menu" className="nav-link" to="/joblist">
-                JOBS
+              <Link id="menu" className="nav-link" to="/jobs">
+                Jobs
               </Link>
             </li>
             <li className="nav-item">
               <Link id="menu" className="nav-link" to="/aboutus">
-                ABOUT US
+                About us
               </Link>
             </li>
 
             <li className="nav-item">
               <Link id="menu" className="nav-link" to="/blogs">
-                BLOG
+                Blog
               </Link>
             </li>
             <li className="nav-item">
               <Link id="menu" className="nav-link" to="/addReview">
-                DASHBOARD
+                Dashboard
               </Link>
             </li>
             <li className="nav-item">

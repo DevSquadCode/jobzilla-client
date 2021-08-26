@@ -16,7 +16,7 @@ import SingleBlog from "./components/Blogs/SingleBlog.js";
 import { createContext, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute.js";
 import { getDecodedUser } from "./pages/authentication/AuthManager";
-import JobList from "./Joblist/JobList.js";
+import AllJobs from "./pages/AllJobs/AllJobs.jsx";
 export const UserContext = createContext();
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
           <Route path="/aboutus">
             <AboutUs />
           </Route>
-          <Route path="/joblist">
-            <JobList />
+          <Route path="/jobs">
+            <AllJobs />
           </Route>
           <Route path="/register/jobSeeker">
             <RegisterAsJobSeeker />
