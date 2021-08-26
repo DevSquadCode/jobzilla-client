@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Spinner } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
+import JobListAnimation from '../../components/Shared/Animations/JobListAnimation/JobListAnimation';
 import SingleJobList from '../../components/Shared/SingleJobList/SingleJobList';
 
 
@@ -24,11 +25,7 @@ const AllJobs = () => {
             <Header />
             <Container>
                 {spinner ? (
-                    <div className="col-md-12 d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-                        <div className="p-1">
-                            <Spinner animation="border" variant="success" />
-                        </div>
-                    </div>
+                    <JobListAnimation />
                 ) : (
                     <div className="col-md-12 mt-5 pt-5 px-0">
                         {job?.map((singleJob) => (
