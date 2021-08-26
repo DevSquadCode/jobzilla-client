@@ -1,41 +1,79 @@
-.text-brand{
+.text-brand {
     /* color: #304ffe; */
     color: #8B2323;
     /* color: #6c63ff; */
     /* color: rgb(235, 240, 245) footer background color */
 }
 
-.bg-brand{
+.bg-brand {
     background-color: #8B2323;
     /* background-color: #FFF0F5; */
 }
 
-.btn-brand{
+.btn-brand {
     color: rgb(255, 255, 255);
     padding: 7px 25px;
     border: none;
     background-color: #8B2323;
 }
 
-.btn-brand-outline{
+.btn-brand-outline {
     padding: 10px 25px;
     color: #8B2323;
     border: 1px solid #8B2323;
     transition: all 0.5s ease;
 }
 
-.btn-brand-outline:hover{
+.btn-brand-outline:hover {
     color: white;
     background-color: #8B2323;
 }
 
-
-.custom-input{
-   border: 1px solid lightgray;
-   transition: all 0.5s ease;
+.custom-input {
+    border: 1px solid lightgray;
+    transition: all 0.5s ease;
 }
 
-.custom-input:focus{
+.custom-input:focus {
     outline: none;
     border: 1px solid #8B2323;
+}
+
+/* animation css */
+
+
+.animation-card {
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px 0 lightgray;
+    padding: 30px 40px;
+    width: 90%;
+    margin: 50px auto;
+}
+
+.wrapper {
+    width: 0px;
+    animation: fullView 0.5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+
+
+@keyframes fullView {
+    100% {
+        width: 100%;
+    }
+}
+
+.animate {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+    background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
 }
